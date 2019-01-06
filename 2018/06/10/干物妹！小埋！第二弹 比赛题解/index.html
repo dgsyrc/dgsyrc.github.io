@@ -99,18 +99,18 @@
 
 
 
-  <meta name="description" content="Problem A（小埋与Chicken rabbit with cages）：此题为典型的鸡兔同笼问题，原意用于照顾蒟蒻，故比较简单，模拟解方程组即可。 $x+y=head$ $2x+4y=leg$ 附标程： 12345678910111213141516171819#include&amp;lt;iostream&amp;gt;namespace UMR/*防抄袭命名空间*/&amp;#123;    long lo">
-<meta name="keywords" content="洛谷">
+  <meta name="description" content="Problem A（小埋与Chicken rabbit with cages）：此题为典型的鸡兔同笼问题，原意用于照顾蒟蒻，故比较简单，模拟解方程组即可。 $ x+y=head $ $ 2x+4y=leg $ 附标程： 12345678910111213141516171819#include&amp;lt;iostream&amp;gt;namespace UMR/*防抄袭命名空间*/&amp;#123;    lon">
+<meta name="keywords" content="洛谷,题解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="干物妹！小埋！第二弹 比赛题解">
 <meta property="og:url" content="http://yoursite.com/2018/06/10/干物妹！小埋！第二弹 比赛题解/index.html">
 <meta property="og:site_name" content="YRC的博客">
-<meta property="og:description" content="Problem A（小埋与Chicken rabbit with cages）：此题为典型的鸡兔同笼问题，原意用于照顾蒟蒻，故比较简单，模拟解方程组即可。 $x+y=head$ $2x+4y=leg$ 附标程： 12345678910111213141516171819#include&amp;lt;iostream&amp;gt;namespace UMR/*防抄袭命名空间*/&amp;#123;    long lo">
+<meta property="og:description" content="Problem A（小埋与Chicken rabbit with cages）：此题为典型的鸡兔同笼问题，原意用于照顾蒟蒻，故比较简单，模拟解方程组即可。 $ x+y=head $ $ 2x+4y=leg $ 附标程： 12345678910111213141516171819#include&amp;lt;iostream&amp;gt;namespace UMR/*防抄袭命名空间*/&amp;#123;    lon">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-06T05:10:08.000Z">
+<meta property="og:updated_time" content="2019-01-06T06:38:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="干物妹！小埋！第二弹 比赛题解">
-<meta name="twitter:description" content="Problem A（小埋与Chicken rabbit with cages）：此题为典型的鸡兔同笼问题，原意用于照顾蒟蒻，故比较简单，模拟解方程组即可。 $x+y=head$ $2x+4y=leg$ 附标程： 12345678910111213141516171819#include&amp;lt;iostream&amp;gt;namespace UMR/*防抄袭命名空间*/&amp;#123;    long lo">
+<meta name="twitter:description" content="Problem A（小埋与Chicken rabbit with cages）：此题为典型的鸡兔同笼问题，原意用于照顾蒟蒻，故比较简单，模拟解方程组即可。 $ x+y=head $ $ 2x+4y=leg $ 附标程： 12345678910111213141516171819#include&amp;lt;iostream&amp;gt;namespace UMR/*防抄袭命名空间*/&amp;#123;    lon">
 
 
 
@@ -368,8 +368,8 @@
 
       
         <h2 id="Problem-A（小埋与Chicken-rabbit-with-cages）："><a href="#Problem-A（小埋与Chicken-rabbit-with-cages）：" class="headerlink" title="Problem A（小埋与Chicken rabbit with cages）："></a>Problem A（小埋与Chicken rabbit with cages）：</h2><p>此题为典型的鸡兔同笼问题，原意用于照顾蒟蒻，故比较简单，模拟解方程组即可。</p>
-<p>$x+y=head$</p>
-<p>$2x+4y=leg$</p>
+<p>$ x+y=head $</p>
+<p>$ 2x+4y=leg $</p>
 <p>附标程：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">namespace</span> UMR<span class="comment">/*防抄袭命名空间*/</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> a=<span class="number">0</span>,b=<span class="number">0</span>,x=<span class="number">0</span>,y=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> UMR;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> d=<span class="number">1</span>;d&lt;=n;d++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">		y=(b<span class="number">-2</span>*a)/<span class="number">2</span>;</span><br><span class="line">		x=a-y;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;x&lt;&lt;<span class="string">" "</span>&lt;&lt;y&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
@@ -409,6 +409,8 @@
           
             <a href="/tags/洛谷/" rel="tag"># 洛谷</a>
           
+            <a href="/tags/题解/" rel="tag"># 题解</a>
+          
         </div>
       
 
@@ -430,8 +432,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/30/UMR-IT-Team-团队守则/" rel="prev" title="UMR IT Team 团队守则">
-                UMR IT Team 团队守则 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/10/干物妹！小埋！第三弹-比赛题解/" rel="prev" title="干物妹！小埋！第三弹 比赛题解">
+                干物妹！小埋！第三弹 比赛题解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -508,7 +510,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -527,7 +529,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -552,6 +560,21 @@
               
                 <span class="links-of-author-item">
                   <a href="https://www.luogu.org/space/show?uid=89910" target="_blank" title="luogu"><i class="fa fa-fw fa-code"></i>luogu</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://space.bilibili.com/179225431?" target="_blank" title="bilibili"><i class="fa fa-fw fa-tv"></i>bilibili</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://i.youku.com/yrcminecraft" target="_blank" title="youku"><i class="fa fa-fw fa-tv"></i>youku</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.luogu.org/team/show?teamid=6964" target="_blank" title="Group"><i class="fa fa-fw fa-book"></i>Group</a>
                   
                 </span>
               
@@ -800,6 +823,29 @@
   
 
   
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
 
 
   
@@ -812,6 +858,15 @@
   
 
   
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script type="text/javascript">
+  
+    bookmark.scrollToMark('manual', "#more");
+  
+  </script>
+
 
 </body>
 </html>
