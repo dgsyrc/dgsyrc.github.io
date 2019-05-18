@@ -100,47 +100,27 @@
 
 
 
-  <meta name="description" content="存档快一个月了，想着博客刚刚更新没多久，我还是决定分享一下成果吧！（不会告诉你大部分时间是在机房FB推存档进度的） 世界时间：Day32  物品：矿物： 绿宝石*6钻石*35金锭*50萤石粉*64青金石*102铁锭*54 （我好穷啊）石英*68红石粉*561煤炭*7 （wdf）金粒*7 （猪人赠）当然数据这只是这个箱子里的，加上其他地方的也就多一点而已了 战利品： 金剑*3 （来自友好的猪人）金胸">
-<meta name="keywords" content="Minecraft,我的世界,game">
+  <meta name="description" content="主要思想 bfs运用队列queue减少代码量（坐标数组）简单点来说就是先从马的位置开始搜索，搜索马可以到达的点： 蓝色点即为马可以到达的点（马走日），红色为马所在位置：  上代码： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647#include&amp;lt;iostream&amp;gt;">
+<meta name="keywords" content="题解,洛谷">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的Minecraft生存系列（1）">
-<meta property="og:url" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/index.html">
+<meta property="og:title" content="洛谷题解 P1443 【马的遍历】">
+<meta property="og:url" content="https://dgsyrc.github.io/2019/05/13/洛谷题解 P1443 【马的遍历】/index.html">
 <meta property="og:site_name" content="YRC的博客">
-<meta property="og:description" content="存档快一个月了，想着博客刚刚更新没多久，我还是决定分享一下成果吧！（不会告诉你大部分时间是在机房FB推存档进度的） 世界时间：Day32  物品：矿物： 绿宝石*6钻石*35金锭*50萤石粉*64青金石*102铁锭*54 （我好穷啊）石英*68红石粉*561煤炭*7 （wdf）金粒*7 （猪人赠）当然数据这只是这个箱子里的，加上其他地方的也就多一点而已了 战利品： 金剑*3 （来自友好的猪人）金胸">
+<meta property="og:description" content="主要思想 bfs运用队列queue减少代码量（坐标数组）简单点来说就是先从马的位置开始搜索，搜索马可以到达的点： 蓝色点即为马可以到达的点（马走日），红色为马所在位置：  上代码： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647#include&amp;lt;iostream&amp;gt;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/1.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/2.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/3.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/21.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/20.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/4.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/5.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/6.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/7.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/8.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/9.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/10.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/11.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/12.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/13.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/14.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/15.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/16.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/17.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/18.png">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/19.png">
-<meta property="og:updated_time" content="2019-01-12T02:58:30.000Z">
+<meta property="og:image" content="https://dgsyrc.github.io/2019/05/13/洛谷题解%20P1443%20【马的遍历】/P1443.jpg">
+<meta property="og:updated_time" content="2019-05-18T00:51:29.675Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的Minecraft生存系列（1）">
-<meta name="twitter:description" content="存档快一个月了，想着博客刚刚更新没多久，我还是决定分享一下成果吧！（不会告诉你大部分时间是在机房FB推存档进度的） 世界时间：Day32  物品：矿物： 绿宝石*6钻石*35金锭*50萤石粉*64青金石*102铁锭*54 （我好穷啊）石英*68红石粉*561煤炭*7 （wdf）金粒*7 （猪人赠）当然数据这只是这个箱子里的，加上其他地方的也就多一点而已了 战利品： 金剑*3 （来自友好的猪人）金胸">
-<meta name="twitter:image" content="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/1.png">
+<meta name="twitter:title" content="洛谷题解 P1443 【马的遍历】">
+<meta name="twitter:description" content="主要思想 bfs运用队列queue减少代码量（坐标数组）简单点来说就是先从马的位置开始搜索，搜索马可以到达的点： 蓝色点即为马可以到达的点（马走日），红色为马所在位置：  上代码： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647#include&amp;lt;iostream&amp;gt;">
+<meta name="twitter:image" content="https://dgsyrc.github.io/2019/05/13/洛谷题解%20P1443%20【马的遍历】/P1443.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/">
+  <link rel="canonical" href="https://dgsyrc.github.io/2019/05/13/洛谷题解 P1443 【马的遍历】/">
 
 
 
@@ -150,7 +130,7 @@
   };
 </script>
 
-  <title>我的Minecraft生存系列（1） | YRC的博客</title>
+  <title>洛谷题解 P1443 【马的遍历】 | YRC的博客</title>
   
 
 
@@ -399,7 +379,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dgsyrc.github.io/2019/01/12/我的Minecraft生存系列（1）/">
+    <link itemprop="mainEntityOfPage" href="https://dgsyrc.github.io/2019/05/13/洛谷题解 P1443 【马的遍历】/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YRC">
@@ -416,7 +396,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">我的Minecraft生存系列（1）
+          <h1 class="post-title" itemprop="name headline">洛谷题解 P1443 【马的遍历】
 
               
             
@@ -442,12 +422,24 @@
                 
               
 
-              <time title="创建时间：2019-01-12 09:53:40 / 修改时间：10:58:30" itemprop="dateCreated datePublished" datetime="2019-01-12T09:53:40+08:00">2019-01-12</time>
+              <time title="创建时间：2019-05-13 18:22:04" itemprop="dateCreated datePublished" datetime="2019-05-13T18:22:04+08:00">2019-05-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-18 08:51:29" itemprop="dateModified" datetime="2019-05-18T08:51:29+08:00">2019-05-18</time>
               
             
           </span>
@@ -481,7 +473,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">672</span>
+                <span title="本文字数">1.5k</span>
               
 
               
@@ -515,34 +507,13 @@
       
 
       
-        <p>存档快一个月了，想着博客刚刚更新没多久，我还是决定分享一下成果吧！<del>（不会告诉你大部分时间是在机房FB推存档进度的）</del></p>
-<p>世界时间：Day32</p>
-<p><img src="1.png" alt=""></p>
-<h2 id="物品："><a href="#物品：" class="headerlink" title="物品："></a>物品：</h2><h3 id="矿物："><a href="#矿物：" class="headerlink" title="矿物："></a>矿物：</h3><p><img src="2.png" alt=""></p>
-<h4 id="绿宝石-6"><a href="#绿宝石-6" class="headerlink" title="绿宝石*6"></a>绿宝石*6</h4><h4 id="钻石-35"><a href="#钻石-35" class="headerlink" title="钻石*35"></a>钻石*35</h4><h4 id="金锭-50"><a href="#金锭-50" class="headerlink" title="金锭*50"></a>金锭*50</h4><h4 id="萤石粉-64"><a href="#萤石粉-64" class="headerlink" title="萤石粉*64"></a>萤石粉*64</h4><h4 id="青金石-102"><a href="#青金石-102" class="headerlink" title="青金石*102"></a>青金石*102</h4><h4 id="铁锭-54-（我好穷啊）"><a href="#铁锭-54-（我好穷啊）" class="headerlink" title="铁锭*54 （我好穷啊）"></a>铁锭*54 <del>（我好穷啊）</del></h4><h4 id="石英-68"><a href="#石英-68" class="headerlink" title="石英*68"></a>石英*68</h4><h4 id="红石粉-561"><a href="#红石粉-561" class="headerlink" title="红石粉*561"></a>红石粉*561</h4><h4 id="煤炭-7-（wdf）"><a href="#煤炭-7-（wdf）" class="headerlink" title="煤炭*7 （wdf）"></a>煤炭*7 <del>（wdf）</del></h4><h4 id="金粒-7-（猪人赠）"><a href="#金粒-7-（猪人赠）" class="headerlink" title="金粒*7 （猪人赠）"></a>金粒*7 <del>（猪人赠）</del></h4><p>当然数据这只是这个箱子里的，加上其他地方的也就多一点而已了</p>
-<h3 id="战利品："><a href="#战利品：" class="headerlink" title="战利品："></a>战利品：</h3><p><img src="3.png" alt=""></p>
-<h4 id="金剑-3-（来自友好的猪人）"><a href="#金剑-3-（来自友好的猪人）" class="headerlink" title="金剑*3 （来自友好的猪人）"></a>金剑*3 <del>（来自友好的猪人）</del></h4><h4 id="金胸甲-2-（来自友好的猪人）"><a href="#金胸甲-2-（来自友好的猪人）" class="headerlink" title="金胸甲*2 （来自友好的猪人）"></a>金胸甲*2 <del>（来自友好的猪人）</del></h4><h4 id="金马铠-6-（地狱堡垒）"><a href="#金马铠-6-（地狱堡垒）" class="headerlink" title="金马铠*6 （地狱堡垒）"></a>金马铠*6 <del>（地狱堡垒）</del></h4><h4 id="铁马铠-4-（地狱堡垒）"><a href="#铁马铠-4-（地狱堡垒）" class="headerlink" title="铁马铠*4 （地狱堡垒）"></a>铁马铠*4 <del>（地狱堡垒）</del></h4><h4 id="钻石马铠-1-（穿在我家白龙马上了）"><a href="#钻石马铠-1-（穿在我家白龙马上了）" class="headerlink" title="钻石马铠*1 （穿在我家白龙马上了）"></a>钻石马铠*1 <del>（穿在我家白龙马上了）</del></h4><h4 id="鞍-1-（沙漠神殿）"><a href="#鞍-1-（沙漠神殿）" class="headerlink" title="鞍*1 （沙漠神殿）"></a>鞍*1 <del>（沙漠神殿）</del></h4><h4 id="金苹果-1-（地狱堡垒）"><a href="#金苹果-1-（地狱堡垒）" class="headerlink" title="金苹果*1 （地狱堡垒）"></a>金苹果*1 <del>（地狱堡垒）</del></h4><h4 id="粘液球-27-（在另一个箱子里）"><a href="#粘液球-27-（在另一个箱子里）" class="headerlink" title="粘液球*27 （在另一个箱子里）"></a>粘液球*27 <del>（在另一个箱子里）</del></h4><h4 id="命名牌-2"><a href="#命名牌-2" class="headerlink" title="命名牌*2"></a>命名牌*2</h4><h4 id="附魔书："><a href="#附魔书：" class="headerlink" title="附魔书："></a>附魔书：</h4><h5 id="爆炸保护Ⅲ-（沙漠神殿）"><a href="#爆炸保护Ⅲ-（沙漠神殿）" class="headerlink" title="爆炸保护Ⅲ （沙漠神殿）"></a>爆炸保护Ⅲ <del>（沙漠神殿）</del></h5><h5 id="经验修补-（钓鱼）"><a href="#经验修补-（钓鱼）" class="headerlink" title="经验修补 （钓鱼）"></a>经验修补 <del>（钓鱼）</del></h5><h5 id="锋利Ⅲ-（沙漠神殿）"><a href="#锋利Ⅲ-（沙漠神殿）" class="headerlink" title="锋利Ⅲ （沙漠神殿）"></a>锋利Ⅲ <del>（沙漠神殿）</del></h5><h5 id="火焰保护Ⅲ-水下呼吸Ⅱ-（钓鱼…-）"><a href="#火焰保护Ⅲ-水下呼吸Ⅱ-（钓鱼…-）" class="headerlink" title="火焰保护Ⅲ 水下呼吸Ⅱ （钓鱼….）"></a>火焰保护Ⅲ 水下呼吸Ⅱ <del>（钓鱼….）</del></h5><h5 id="力量Ⅳ-锋利Ⅲ-（钓鱼…-出神装…-）"><a href="#力量Ⅳ-锋利Ⅲ-（钓鱼…-出神装…-）" class="headerlink" title="力量Ⅳ 锋利Ⅲ （钓鱼….出神装….）"></a>力量Ⅳ 锋利Ⅲ <del>（钓鱼….出神装….）</del></h5><p>要致富，先<del>钓鱼</del></p>
-<h3 id="酿药："><a href="#酿药：" class="headerlink" title="酿药："></a>酿药：</h3><p><img src="21.png" alt=""></p>
-<h4 id="原料："><a href="#原料：" class="headerlink" title="原料："></a>原料：</h4><h5 id="地狱疣-107"><a href="#地狱疣-107" class="headerlink" title="地狱疣*107"></a>地狱疣*107</h5><h5 id="红石粉-8-（前面矿物箱还有一大把）"><a href="#红石粉-8-（前面矿物箱还有一大把）" class="headerlink" title="红石粉*8 （前面矿物箱还有一大把）"></a>红石粉*8 （前面矿物箱还有一大把）</h5><h5 id="萤石粉-43"><a href="#萤石粉-43" class="headerlink" title="萤石粉*43"></a>萤石粉*43</h5><h5 id="河豚-2"><a href="#河豚-2" class="headerlink" title="河豚*2"></a>河豚*2</h5><h5 id="烈焰棒-5"><a href="#烈焰棒-5" class="headerlink" title="烈焰棒*5"></a>烈焰棒*5</h5><h5 id="金粒-9"><a href="#金粒-9" class="headerlink" title="金粒*9"></a>金粒*9</h5><h5 id="糖-8"><a href="#糖-8" class="headerlink" title="糖*8"></a>糖*8</h5><h4 id="成品："><a href="#成品：" class="headerlink" title="成品："></a>成品：</h4><h5 id="力量药水（8-00）-3"><a href="#力量药水（8-00）-3" class="headerlink" title="力量药水（8:00）*3"></a>力量药水（8:00）*3</h5><h5 id="迅捷药水（8-00）-3"><a href="#迅捷药水（8-00）-3" class="headerlink" title="迅捷药水（8:00）*3"></a>迅捷药水（8:00）*3</h5><h5 id="水肺药水（8-00）-3"><a href="#水肺药水（8-00）-3" class="headerlink" title="水肺药水（8:00）*3"></a>水肺药水（8:00）*3</h5><h2 id="家："><a href="#家：" class="headerlink" title="家："></a>家：</h2><h3 id="基本属性："><a href="#基本属性：" class="headerlink" title="基本属性："></a>基本属性：</h3><h4 id="坐标：X：1424-Y：7-Z-1430"><a href="#坐标：X：1424-Y：7-Z-1430" class="headerlink" title="坐标：X：1424 Y：7 Z:-1430"></a>坐标：X：1424 Y：7 Z:-1430</h4><h4 id="大小：不会算…挖了约64-64-4096块石头左右"><a href="#大小：不会算…挖了约64-64-4096块石头左右" class="headerlink" title="大小：不会算…挖了约64*64=4096块石头左右"></a>大小：不会算…挖了约64*64=4096块石头左右</h4><h3 id="设施："><a href="#设施：" class="headerlink" title="设施："></a>设施：</h3><h4 id="通道："><a href="#通道：" class="headerlink" title="通道："></a>通道：</h4><p><img src="20.png" alt=""></p>
-<h4 id="客厅-厨房："><a href="#客厅-厨房：" class="headerlink" title="客厅/厨房："></a>客厅/厨房：</h4><p><img src="4.png" alt=""></p>
-<p>木有家具欸…</p>
-<h4 id="农场："><a href="#农场：" class="headerlink" title="农场："></a>农场：</h4><p><img src="5.png" alt=""></p>
-<p><img src="6.png" alt=""></p>
-<p><img src="7.png" alt=""></p>
-<h5 id="甘蔗"><a href="#甘蔗" class="headerlink" title="甘蔗"></a>甘蔗</h5><h5 id="小麦"><a href="#小麦" class="headerlink" title="小麦"></a>小麦</h5><h5 id="南瓜"><a href="#南瓜" class="headerlink" title="南瓜"></a>南瓜</h5><h5 id="地狱疣"><a href="#地狱疣" class="headerlink" title="地狱疣"></a>地狱疣</h5><h4 id="牧场："><a href="#牧场：" class="headerlink" title="牧场："></a>牧场：</h4><h5 id="牛-羊："><a href="#牛-羊：" class="headerlink" title="牛/羊："></a>牛/羊：</h5><p><img src="8.png" alt=""></p>
-<h5 id="鸡："><a href="#鸡：" class="headerlink" title="鸡："></a>鸡：</h5><p><img src="9.png" alt=""></p>
-<h5 id="马（白龙马）："><a href="#马（白龙马）：" class="headerlink" title="马（白龙马）："></a>马（白龙马）：</h5><p><img src="10.png" alt=""></p>
-<h4 id="储物室："><a href="#储物室：" class="headerlink" title="储物室："></a>储物室：</h4><p><img src="11.png" alt=""></p>
-<h4 id="附魔室-地狱传送门："><a href="#附魔室-地狱传送门：" class="headerlink" title="附魔室+地狱传送门："></a>附魔室+地狱传送门：</h4><p><img src="12.png" alt=""></p>
-<h4 id="酿药室："><a href="#酿药室：" class="headerlink" title="酿药室："></a>酿药室：</h4><p><img src="13.png" alt=""></p>
-<h4 id="荒废的史莱姆农场："><a href="#荒废的史莱姆农场：" class="headerlink" title="荒废的史莱姆农场："></a>荒废的史莱姆农场：</h4><p><img src="14.png" alt=""></p>
-<h4 id="重生点-床（地底有Bug，设不了）："><a href="#重生点-床（地底有Bug，设不了）：" class="headerlink" title="重生点-床（地底有Bug，设不了）："></a>重生点-床（地底有Bug，设不了）：</h4><p><img src="15.png" alt=""></p>
-<h4 id="周边-岩浆湖："><a href="#周边-岩浆湖：" class="headerlink" title="周边-岩浆湖："></a>周边-岩浆湖：</h4><p><img src="16.png" alt=""></p>
-<h2 id="进度："><a href="#进度：" class="headerlink" title="进度："></a>进度：</h2><h3 id="地狱："><a href="#地狱：" class="headerlink" title="地狱："></a>地狱：</h3><p><img src="17.png" alt=""></p>
-<h4 id="地狱堡垒："><a href="#地狱堡垒：" class="headerlink" title="地狱堡垒："></a>地狱堡垒：</h4><p><img src="18.png" alt=""></p>
-<h4 id="烈焰人刷怪笼："><a href="#烈焰人刷怪笼：" class="headerlink" title="烈焰人刷怪笼："></a>烈焰人刷怪笼：</h4><p><img src="19.png" alt=""></p>
-<hr>
-<p>期待下一篇生存系列报导！</p>
+        <h2 id="主要思想-bfs"><a href="#主要思想-bfs" class="headerlink" title="主要思想 bfs"></a>主要思想 bfs</h2><h2 id="运用队列queue"><a href="#运用队列queue" class="headerlink" title="运用队列queue"></a>运用队列queue</h2><h3 id="减少代码量（坐标数组）"><a href="#减少代码量（坐标数组）" class="headerlink" title="减少代码量（坐标数组）"></a>减少代码量（坐标数组）</h3><p>简单点来说就是先从马的位置开始搜索，搜索马可以到达的点：</p>
+<p>蓝色点即为马可以到达的点（马走日），红色为马所在位置：</p>
+<p><img src="P1443.jpg" alt=""></p>
+<p>上代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> node[<span class="number">9</span>][<span class="number">2</span>]=&#123;&#123;<span class="number">0</span>,<span class="number">0</span>&#125;,&#123;<span class="number">-2</span>,<span class="number">1</span>&#125;,&#123;<span class="number">1</span>,<span class="number">-2</span>&#125;,&#123;<span class="number">2</span>,<span class="number">-1</span>&#125;,&#123;<span class="number">-1</span>,<span class="number">2</span>&#125;,&#123;<span class="number">2</span>,<span class="number">1</span>&#125;,&#123;<span class="number">-2</span>,<span class="number">-1</span>&#125;,&#123;<span class="number">1</span>,<span class="number">2</span>&#125;,&#123;<span class="number">-1</span>,<span class="number">-2</span>&#125;&#125;;<span class="comment">//坐标数组，节省代码量</span></span><br><span class="line"><span class="keyword">int</span> n,m,xs,ys,<span class="built_in">map</span>[<span class="number">401</span>][<span class="number">401</span>];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">zb</span>//结构体</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> x,y,bu;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">queue</span>&lt;zb&gt; Q;<span class="comment">//队列</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m&gt;&gt;xs&gt;&gt;ys;<span class="comment">//输入</span></span><br><span class="line">	<span class="built_in">memset</span>(<span class="built_in">map</span>,<span class="number">10000</span>,<span class="keyword">sizeof</span>(<span class="built_in">map</span>));<span class="comment">//初始化，便于后面的搜索比较和输出</span></span><br><span class="line">	<span class="built_in">map</span>[xs][ys]=<span class="number">0</span>;<span class="comment">//一定要是0（马所在点步数为0）</span></span><br><span class="line">	Q.push((zb)&#123;xs,ys,<span class="number">0</span>&#125;);<span class="comment">//进队</span></span><br><span class="line">	<span class="keyword">while</span>(!Q.empty())</span><br><span class="line">	&#123;</span><br><span class="line">		zb news=Q.front();</span><br><span class="line">		Q.pop();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> a=<span class="number">1</span>;a&lt;=<span class="number">8</span>;a++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(news.y+node[a][<span class="number">1</span>]&gt;<span class="number">0</span>&amp;&amp;news.y+node[a][<span class="number">1</span>]&lt;=m&amp;&amp;news.x+node[a][<span class="number">0</span>]&gt;<span class="number">0</span>&amp;&amp;news.x+node[a][<span class="number">0</span>]&lt;=n&amp;&amp;<span class="built_in">map</span>[news.x+node[a][<span class="number">0</span>]][news.y+node[a][<span class="number">1</span>]]&gt;news.bu+<span class="number">1</span>)<span class="comment">//又长又臭的if语句，比较步数，判断是否越界</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">map</span>[news.x+node[a][<span class="number">0</span>]][news.y+node[a][<span class="number">1</span>]]=news.bu+<span class="number">1</span>;<span class="comment">//更新</span></span><br><span class="line">				Q.push((zb)&#123;news.x+node[a][<span class="number">0</span>],news.y+node[a][<span class="number">1</span>],news.bu+<span class="number">1</span>&#125;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> a=<span class="number">1</span>;a&lt;=n;a++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> b=<span class="number">1</span>;b&lt;=m;b++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(<span class="built_in">map</span>[a][b]&gt;=<span class="number">10000</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%-5d"</span>,<span class="number">-1</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%-5d"</span>,<span class="built_in">map</span>[a][b]);	</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="就这么简单，预祝明日特长生考试通过！"><a href="#就这么简单，预祝明日特长生考试通过！" class="headerlink" title="就这么简单，预祝明日特长生考试通过！"></a>就这么简单，预祝明日特长生考试通过！</h2><p>题目详见:<a href="https://www.luogu.org/problemnew/show/P1443" target="_blank" rel="noopener">https://www.luogu.org/problemnew/show/P1443</a></p>
 
       
     </div>
@@ -566,11 +537,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Minecraft/" rel="tag"># Minecraft</a>
+            <a href="/tags/题解/" rel="tag"># 题解</a>
           
-            <a href="/tags/我的世界/" rel="tag"># 我的世界</a>
-          
-            <a href="/tags/game/" rel="tag"># game</a>
+            <a href="/tags/洛谷/" rel="tag"># 洛谷</a>
           
         </div>
       
@@ -603,8 +572,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/16/洛谷题解 P3955 【图书管理员】/" rel="next" title="洛谷题解 P3955 【图书管理员】">
-                <i class="fa fa-chevron-left"></i> 洛谷题解 P3955 【图书管理员】
+              <a href="/2019/02/13/我的Minecraft生存系列（2）/" rel="next" title="我的Minecraft生存系列（2）">
+                <i class="fa fa-chevron-left"></i> 我的Minecraft生存系列（2）
               </a>
             
           </div>
@@ -613,8 +582,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/12/二十校联考-九上期末考试备考记/" rel="prev" title="二十校联考-九上期末考试备考记">
-                二十校联考-九上期末考试备考记 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/05/18/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -866,7 +835,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#物品："><span class="nav-number">1.</span> <span class="nav-text">物品：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#矿物："><span class="nav-number">1.1.</span> <span class="nav-text">矿物：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#绿宝石-6"><span class="nav-number">1.1.1.</span> <span class="nav-text">绿宝石*6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#钻石-35"><span class="nav-number">1.1.2.</span> <span class="nav-text">钻石*35</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#金锭-50"><span class="nav-number">1.1.3.</span> <span class="nav-text">金锭*50</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#萤石粉-64"><span class="nav-number">1.1.4.</span> <span class="nav-text">萤石粉*64</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#青金石-102"><span class="nav-number">1.1.5.</span> <span class="nav-text">青金石*102</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#铁锭-54-（我好穷啊）"><span class="nav-number">1.1.6.</span> <span class="nav-text">铁锭*54 （我好穷啊）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#石英-68"><span class="nav-number">1.1.7.</span> <span class="nav-text">石英*68</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#红石粉-561"><span class="nav-number">1.1.8.</span> <span class="nav-text">红石粉*561</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#煤炭-7-（wdf）"><span class="nav-number">1.1.9.</span> <span class="nav-text">煤炭*7 （wdf）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#金粒-7-（猪人赠）"><span class="nav-number">1.1.10.</span> <span class="nav-text">金粒*7 （猪人赠）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#战利品："><span class="nav-number">1.2.</span> <span class="nav-text">战利品：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#金剑-3-（来自友好的猪人）"><span class="nav-number">1.2.1.</span> <span class="nav-text">金剑*3 （来自友好的猪人）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#金胸甲-2-（来自友好的猪人）"><span class="nav-number">1.2.2.</span> <span class="nav-text">金胸甲*2 （来自友好的猪人）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#金马铠-6-（地狱堡垒）"><span class="nav-number">1.2.3.</span> <span class="nav-text">金马铠*6 （地狱堡垒）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#铁马铠-4-（地狱堡垒）"><span class="nav-number">1.2.4.</span> <span class="nav-text">铁马铠*4 （地狱堡垒）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#钻石马铠-1-（穿在我家白龙马上了）"><span class="nav-number">1.2.5.</span> <span class="nav-text">钻石马铠*1 （穿在我家白龙马上了）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#鞍-1-（沙漠神殿）"><span class="nav-number">1.2.6.</span> <span class="nav-text">鞍*1 （沙漠神殿）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#金苹果-1-（地狱堡垒）"><span class="nav-number">1.2.7.</span> <span class="nav-text">金苹果*1 （地狱堡垒）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#粘液球-27-（在另一个箱子里）"><span class="nav-number">1.2.8.</span> <span class="nav-text">粘液球*27 （在另一个箱子里）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#命名牌-2"><span class="nav-number">1.2.9.</span> <span class="nav-text">命名牌*2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附魔书："><span class="nav-number">1.2.10.</span> <span class="nav-text">附魔书：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#爆炸保护Ⅲ-（沙漠神殿）"><span class="nav-number">1.2.10.1.</span> <span class="nav-text">爆炸保护Ⅲ （沙漠神殿）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#经验修补-（钓鱼）"><span class="nav-number">1.2.10.2.</span> <span class="nav-text">经验修补 （钓鱼）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#锋利Ⅲ-（沙漠神殿）"><span class="nav-number">1.2.10.3.</span> <span class="nav-text">锋利Ⅲ （沙漠神殿）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#火焰保护Ⅲ-水下呼吸Ⅱ-（钓鱼…-）"><span class="nav-number">1.2.10.4.</span> <span class="nav-text">火焰保护Ⅲ 水下呼吸Ⅱ （钓鱼….）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#力量Ⅳ-锋利Ⅲ-（钓鱼…-出神装…-）"><span class="nav-number">1.2.10.5.</span> <span class="nav-text">力量Ⅳ 锋利Ⅲ （钓鱼….出神装….）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#酿药："><span class="nav-number">1.3.</span> <span class="nav-text">酿药：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原料："><span class="nav-number">1.3.1.</span> <span class="nav-text">原料：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#地狱疣-107"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">地狱疣*107</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#红石粉-8-（前面矿物箱还有一大把）"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">红石粉*8 （前面矿物箱还有一大把）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#萤石粉-43"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">萤石粉*43</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#河豚-2"><span class="nav-number">1.3.1.4.</span> <span class="nav-text">河豚*2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#烈焰棒-5"><span class="nav-number">1.3.1.5.</span> <span class="nav-text">烈焰棒*5</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#金粒-9"><span class="nav-number">1.3.1.6.</span> <span class="nav-text">金粒*9</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#糖-8"><span class="nav-number">1.3.1.7.</span> <span class="nav-text">糖*8</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#成品："><span class="nav-number">1.3.2.</span> <span class="nav-text">成品：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#力量药水（8-00）-3"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">力量药水（8:00）*3</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#迅捷药水（8-00）-3"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">迅捷药水（8:00）*3</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#水肺药水（8-00）-3"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">水肺药水（8:00）*3</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#家："><span class="nav-number">2.</span> <span class="nav-text">家：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本属性："><span class="nav-number">2.1.</span> <span class="nav-text">基本属性：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#坐标：X：1424-Y：7-Z-1430"><span class="nav-number">2.1.1.</span> <span class="nav-text">坐标：X：1424 Y：7 Z:-1430</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#大小：不会算…挖了约64-64-4096块石头左右"><span class="nav-number">2.1.2.</span> <span class="nav-text">大小：不会算…挖了约64*64=4096块石头左右</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设施："><span class="nav-number">2.2.</span> <span class="nav-text">设施：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通道："><span class="nav-number">2.2.1.</span> <span class="nav-text">通道：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#客厅-厨房："><span class="nav-number">2.2.2.</span> <span class="nav-text">客厅/厨房：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#农场："><span class="nav-number">2.2.3.</span> <span class="nav-text">农场：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#甘蔗"><span class="nav-number">2.2.3.1.</span> <span class="nav-text">甘蔗</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#小麦"><span class="nav-number">2.2.3.2.</span> <span class="nav-text">小麦</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#南瓜"><span class="nav-number">2.2.3.3.</span> <span class="nav-text">南瓜</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#地狱疣"><span class="nav-number">2.2.3.4.</span> <span class="nav-text">地狱疣</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#牧场："><span class="nav-number">2.2.4.</span> <span class="nav-text">牧场：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#牛-羊："><span class="nav-number">2.2.4.1.</span> <span class="nav-text">牛/羊：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#鸡："><span class="nav-number">2.2.4.2.</span> <span class="nav-text">鸡：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#马（白龙马）："><span class="nav-number">2.2.4.3.</span> <span class="nav-text">马（白龙马）：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#储物室："><span class="nav-number">2.2.5.</span> <span class="nav-text">储物室：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附魔室-地狱传送门："><span class="nav-number">2.2.6.</span> <span class="nav-text">附魔室+地狱传送门：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#酿药室："><span class="nav-number">2.2.7.</span> <span class="nav-text">酿药室：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#荒废的史莱姆农场："><span class="nav-number">2.2.8.</span> <span class="nav-text">荒废的史莱姆农场：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重生点-床（地底有Bug，设不了）："><span class="nav-number">2.2.9.</span> <span class="nav-text">重生点-床（地底有Bug，设不了）：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#周边-岩浆湖："><span class="nav-number">2.2.10.</span> <span class="nav-text">周边-岩浆湖：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进度："><span class="nav-number">3.</span> <span class="nav-text">进度：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#地狱："><span class="nav-number">3.1.</span> <span class="nav-text">地狱：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#地狱堡垒："><span class="nav-number">3.1.1.</span> <span class="nav-text">地狱堡垒：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#烈焰人刷怪笼："><span class="nav-number">3.1.2.</span> <span class="nav-text">烈焰人刷怪笼：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#主要思想-bfs"><span class="nav-number">1.</span> <span class="nav-text">主要思想 bfs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运用队列queue"><span class="nav-number">2.</span> <span class="nav-text">运用队列queue</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#减少代码量（坐标数组）"><span class="nav-number">2.1.</span> <span class="nav-text">减少代码量（坐标数组）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#就这么简单，预祝明日特长生考试通过！"><span class="nav-number">3.</span> <span class="nav-text">就这么简单，预祝明日特长生考试通过！</span></a></li></ol></div>
             
 
           </div>
@@ -1424,43 +1393,6 @@
   
   
 
-  
-    
-      <script type="text/x-mathjax-config">
-  
-
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-      
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    }
-  });
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-      for (i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-  });
-</script>
-<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-<style>
-.MathJax_Display {
-  overflow: auto hidden;
-}
-</style>
-
-    
   
 
 
