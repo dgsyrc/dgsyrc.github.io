@@ -158,8 +158,8 @@
     <url>%2F2018%2F08%2F15%2F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A%2F</url>
     <content type="text"><![CDATA[相信很多洛谷的伙伴们都很喜欢发图，发图最重要的是图床。 但是，现在我要介绍的是一种无水印原图的图床，我们要借助github这个平台来搭。 github的好处在于它会给每个用户分配一个域名，域名的分配规则是： 你的github用户名.github.io 注意：用户名尽量用英文。 翻译： repositories 存储库 1.在github上注册一个账号后点击右上角的Your repositories: 2.进入repositories界面后点击new创建一个新的存储库，建议存储库命名为：你的github用户名.github.io（如果你已经使用了该存储库那就可以自定义，但是后面的图片链接会有一点不同） 3.创建成功后，先建立一个README文件 4.随后点击上方的Setting并往下拉，去到GitHub Pages设置项，把Source项设定为master branch（如若已设定好则不必改动） 5.最后就可以到存储库里存图了，上传会有几率失败，要多试几次 6.上传完成后即可到你的https://yourgithubname.github.io/你的图片名（加后缀名） 来查看图片了，可以将本链接作为图片链接用到Markdown上。（如果开始你的存储库名是你自定义的，就要把链接改成https://yourgithubname.github.io/存储库名/你的图片名（加后缀名）） 当然，github也是可以搭建网站的。]]></content>
       <tags>
-        <tag>教程</tag>
         <tag>图床</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
