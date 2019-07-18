@@ -3,7 +3,16 @@
   <entry>
     <title><![CDATA[如何修改Windows7启动与关机背景]]></title>
     <url>%2F2019%2F07%2F18%2F%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9Windows7%E5%90%AF%E5%8A%A8%E4%B8%8E%E5%85%B3%E6%9C%BA%E8%83%8C%E6%99%AF%2F</url>
-    <content type="text"><![CDATA[第一步：按’win+R’打开运行，输入’regedit’打开注册表 第二步：打开注册表目录下’HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows/CurrentVersion/Authentication/LogonUI/Background’ 如图： 第三步：新建一个DWORD(32-位)值，命名为’OEMBackground’,并注意大小写 （若已有就直接下一步） 第四步：右键单击新建的值，选择修改，修改为下图配置，并按确定 第五步：打开目录’C:\windows\system32\oobe\info\backgrounds’（部分电脑无info和backgrounds文件夹，要自己新建）,将你的壁纸重命名为’backgroundDefault.jpg’（注意一定要是jpg格式，大小写也不能错）后放入该目录下 按’win+L’去到登录界面即可查看效果 图片大小不能超过250KB，图片长宽比例一般为16:9（按显示屏比例） 效果图：]]></content>
+    <content type="text"><![CDATA[第一步：按win+R打开运行，输入regedit打开注册表 第二步：打开注册表目录下: HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows/CurrentVersion/Authentication/LogonUI/Background 如图： 第三步：新建一个DWORD(32-位)值，命名为OEMBackground,并注意大小写 （若已有就直接下一步） 第四步：右键单击新建的值，选择修改，修改为下图配置，并按确定 第五步：打开目录C:\windows\system32\oobe\info\backgrounds（部分电脑无info和backgrounds文件夹，要自己新建）,将你的壁纸重命名为backgroundDefault.jpg（注意一定要是jpg格式，大小写也不能错）后放入该目录下 按win+L去到登录界面即可查看效果 图片大小不能超过250KB，图片长宽比例一般为16:9（按显示屏比例） 效果图：]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[2019中考备后记]]></title>
+    <url>%2F2019%2F07%2F10%2F2019%E4%B8%AD%E8%80%83%E5%A4%87%E5%90%8E%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[总算考完中考了，考后没什么感觉，面无表情，保持了考试时的高度冷静将近一周时间。 现在成绩也出了，志愿分数线也出了，特地回博客来还愿。 突然想起之前备考记的最后两行： 现在出了的成绩： 语文：102（历史最低水平） 数学：112（还行，跟估分一模一样） 英语：118（满意，就作文扣2分） 物理：97（较满意，本来想满分） 化学：96（我想考满分的 /滑稽) 体育：100（折后60）（体育没什么好说，都是满分的） 历史：94（折后28.2）（出乎意料的高，本来想90就够了，结果中考成了三年来考的第二高的分数，最高一次96） 政治：90（折后27）（woc….我辨析题方向全错，跟答案不沾边，应该扣十分，选择虽全对，但大题加起来怎么可能在有重大失误下才扣十分，不现实，原估分80） 生物：100（折后30）（没什么好说的） 地理：98（折后29.4）（没什么好说的） 总分：736（中考系统自动四舍五入）woc 真730++ I can fly！ 但是看了别人的成绩，我自己也慌得一批（！我们班15人700+） 于是担心起分数线 果然，730++是对的，今年DGZX分数线731，我超过分数线5分 Nice！努力没白费！2019-07-10 YRC]]></content>
+      <tags>
+        <tag>考试</tag>
+        <tag>学习</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[2019中考备考记]]></title>
