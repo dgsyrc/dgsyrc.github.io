@@ -100,25 +100,25 @@
 
 
 
-  <meta name="description" content="本题为最小生成树裸题，直接套模版按题意修改就行了本题与UVA10369相同，但要注意UVA10369有多组数据，而P1991只有一组题意： 给出n个节点的坐标，S个卫星，每个节点相互之间连通且边权为两点间距离，求这个图的最小生成树，输出最小生成树中第S-1长的边的边权，保留两位小数。 注意：S个卫星相当于S-1条边权值为0的边。 这题我是用$Prim$做的，由于看到大家发的都是Kruskal的题解">
+  <meta name="description" content="思路： 这是一道模拟题，看了一下数据量，纯模拟可以过，按题意来看： ERR的情况：F与E不匹配和变量名冲突的 No的情况：只有时间复杂度计算错误的 Yes的情况：除以上两种情况外的 其实还有隐藏的条件：  1.F x 1 1 为O(1)  2.F x 1 n 为O(n)  3.F x 32 n 为O(n)  4.F x n 1 为O(1) 且此语句不执行，因为n远大于100  5.并列的For语句">
 <meta name="keywords" content="洛谷,题解">
 <meta property="og:type" content="article">
-<meta property="og:title" content="洛谷题解 P1991 【无线通讯网】">
-<meta property="og:url" content="https://dgsyrc.github.io/2019/08/09/洛谷题解-P1991-【无线通讯网】/index.html">
+<meta property="og:title" content="洛谷题解 P3952 【时间复杂度】">
+<meta property="og:url" content="https://dgsyrc.github.io/2019/07/20/洛谷题解 P3952 【时间复杂度】/index.html">
 <meta property="og:site_name" content="YRC的博客">
-<meta property="og:description" content="本题为最小生成树裸题，直接套模版按题意修改就行了本题与UVA10369相同，但要注意UVA10369有多组数据，而P1991只有一组题意： 给出n个节点的坐标，S个卫星，每个节点相互之间连通且边权为两点间距离，求这个图的最小生成树，输出最小生成树中第S-1长的边的边权，保留两位小数。 注意：S个卫星相当于S-1条边权值为0的边。 这题我是用$Prim$做的，由于看到大家发的都是Kruskal的题解">
+<meta property="og:description" content="思路： 这是一道模拟题，看了一下数据量，纯模拟可以过，按题意来看： ERR的情况：F与E不匹配和变量名冲突的 No的情况：只有时间复杂度计算错误的 Yes的情况：除以上两种情况外的 其实还有隐藏的条件：  1.F x 1 1 为O(1)  2.F x 1 n 为O(n)  3.F x 32 n 为O(n)  4.F x n 1 为O(1) 且此语句不执行，因为n远大于100  5.并列的For语句">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-09T07:05:04.640Z">
+<meta property="og:updated_time" content="2019-08-10T05:58:43.449Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="洛谷题解 P1991 【无线通讯网】">
-<meta name="twitter:description" content="本题为最小生成树裸题，直接套模版按题意修改就行了本题与UVA10369相同，但要注意UVA10369有多组数据，而P1991只有一组题意： 给出n个节点的坐标，S个卫星，每个节点相互之间连通且边权为两点间距离，求这个图的最小生成树，输出最小生成树中第S-1长的边的边权，保留两位小数。 注意：S个卫星相当于S-1条边权值为0的边。 这题我是用$Prim$做的，由于看到大家发的都是Kruskal的题解">
+<meta name="twitter:title" content="洛谷题解 P3952 【时间复杂度】">
+<meta name="twitter:description" content="思路： 这是一道模拟题，看了一下数据量，纯模拟可以过，按题意来看： ERR的情况：F与E不匹配和变量名冲突的 No的情况：只有时间复杂度计算错误的 Yes的情况：除以上两种情况外的 其实还有隐藏的条件：  1.F x 1 1 为O(1)  2.F x 1 n 为O(n)  3.F x 32 n 为O(n)  4.F x n 1 为O(1) 且此语句不执行，因为n远大于100  5.并列的For语句">
 
 
 
 
 
 
-  <link rel="canonical" href="https://dgsyrc.github.io/2019/08/09/洛谷题解-P1991-【无线通讯网】/">
+  <link rel="canonical" href="https://dgsyrc.github.io/2019/07/20/洛谷题解 P3952 【时间复杂度】/">
 
 
 
@@ -128,7 +128,7 @@
   };
 </script>
 
-  <title>洛谷题解 P1991 【无线通讯网】 | YRC的博客</title>
+  <title>洛谷题解 P3952 【时间复杂度】 | YRC的博客</title>
   
 
 
@@ -377,7 +377,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dgsyrc.github.io/2019/08/09/洛谷题解-P1991-【无线通讯网】/">
+    <link itemprop="mainEntityOfPage" href="https://dgsyrc.github.io/2019/07/20/洛谷题解 P3952 【时间复杂度】/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YRC">
@@ -394,7 +394,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">洛谷题解 P1991 【无线通讯网】
+          <h1 class="post-title" itemprop="name headline">洛谷题解 P3952 【时间复杂度】
 
               
             
@@ -420,12 +420,24 @@
                 
               
 
-              <time title="创建时间：2019-08-09 15:04:41 / 修改时间：15:05:04" itemprop="dateCreated datePublished" datetime="2019-08-09T15:04:41+08:00">2019-08-09</time>
+              <time title="创建时间：2019-07-20 08:56:30" itemprop="dateCreated datePublished" datetime="2019-07-20T08:56:30+08:00">2019-07-20</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-10 13:58:43" itemprop="dateModified" datetime="2019-08-10T13:58:43+08:00">2019-08-10</time>
               
             
           </span>
@@ -459,7 +471,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.2k</span>
+                <span title="本文字数">5.5k</span>
               
 
               
@@ -473,7 +485,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">5 分钟</span>
               
             </div>
           
@@ -493,16 +505,35 @@
       
 
       
-        <h2 id="本题为最小生成树裸题，直接套模版按题意修改就行了"><a href="#本题为最小生成树裸题，直接套模版按题意修改就行了" class="headerlink" title="本题为最小生成树裸题，直接套模版按题意修改就行了"></a>本题为最小生成树裸题，直接套模版按题意修改就行了</h2><h3 id="本题与UVA10369相同，但要注意UVA10369有多组数据，而P1991只有一组"><a href="#本题与UVA10369相同，但要注意UVA10369有多组数据，而P1991只有一组" class="headerlink" title="本题与UVA10369相同，但要注意UVA10369有多组数据，而P1991只有一组"></a>本题与UVA10369相同，但要注意UVA10369有多组数据，而P1991只有一组</h3><p>题意：</p>
-<p>给出n个节点的坐标，S个卫星，每个节点相互之间连通且边权为两点间距离，求这个图的最小生成树，输出最小生成树中第S-1长的边的边权，保留两位小数。</p>
-<p>注意：S个卫星相当于S-1条边权值为0的边。</p>
-<p>这题我是用$Prim$做的，由于看到大家发的都是Kruskal的题解，所以我就补充一篇$Prim$的。</p>
-<p>记得存边权的变量要用double</p>
-<h3 id="AC代码（只能借鉴，不能抄哦）："><a href="#AC代码（只能借鉴，不能抄哦）：" class="headerlink" title="AC代码（只能借鉴，不能抄哦）："></a>AC代码（只能借鉴，不能抄哦）：</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INF 100000000</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn1=<span class="number">10002</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn2=<span class="number">600</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> star,n,x[maxn2],y[maxn2],h=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">bool</span> vis[maxn2];<span class="comment">//已经处理过的点的标记</span></span><br><span class="line"><span class="keyword">double</span> road[maxn2],f[maxn2];<span class="comment">//road为最小生成树中各边的边权</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> v;<span class="comment">//下一个点</span></span><br><span class="line">	<span class="keyword">double</span> w;<span class="comment">//边权</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span>&lt;edge&gt; G[maxn2];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">TPD</span><span class="params">(<span class="keyword">int</span> xa,<span class="keyword">int</span> ya,<span class="keyword">int</span> xb,<span class="keyword">int</span> yb)</span><span class="comment">//求两点距离（在本题即两点间的边的边权）</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">sqrt</span>((<span class="keyword">double</span>)((xa-xb)*(xa-xb)+(ya-yb)*(ya-yb)));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	h=<span class="number">0</span>;<span class="comment">//初始化</span></span><br><span class="line">	<span class="built_in">memset</span>(G,<span class="number">0</span>,<span class="keyword">sizeof</span>(G));<span class="comment">//初始化</span></span><br><span class="line">	<span class="built_in">memset</span>(vis,<span class="literal">false</span>,<span class="keyword">sizeof</span>(vis));<span class="comment">//初始化</span></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;star,&amp;n);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> b=<span class="number">1</span>;b&lt;=n;b++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x[b],&amp;y[b]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> b=<span class="number">1</span>;b&lt;=n;b++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> c=<span class="number">1</span>;c&lt;=n;c++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(b==c)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span><span class="comment">//邻接表建图</span></span><br><span class="line">			&#123;</span><br><span class="line">				edge cmp;</span><br><span class="line">				cmp.v=c;</span><br><span class="line">				cmp.w=TPD(x[b],y[b],x[c],y[c]);</span><br><span class="line">				G[b].push_back(cmp);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		f[i]=INF;<span class="comment">//初始化f[]</span></span><br><span class="line">	&#125;</span><br><span class="line">       <span class="comment">/*                    下方开始Prim             	    */</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;G[<span class="number">1</span>].size();i++)<span class="comment">//找节点1连接到另一节点的最小边</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> v=G[<span class="number">1</span>][i].v;</span><br><span class="line">		<span class="keyword">double</span> w=G[<span class="number">1</span>][i].w;</span><br><span class="line">		f[v]=min(f[v],w);</span><br><span class="line">	&#125;</span><br><span class="line">	vis[<span class="number">1</span>]=<span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">double</span> W=INF;</span><br><span class="line">		<span class="keyword">int</span> V;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(vis[j])</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(f[j]&lt;W)<span class="comment">//更新</span></span><br><span class="line">			&#123;</span><br><span class="line">				W=f[j];</span><br><span class="line">				V=j;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		vis[V]=<span class="literal">true</span>;<span class="comment">//标记已经处理过</span></span><br><span class="line">		h++;</span><br><span class="line">		road[h]=W;<span class="comment">//存最小生成树的边</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;G[V].size();j++)<span class="comment">//找节点V连接到另一节点的最小边</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> v=G[V][j].v;</span><br><span class="line">			<span class="keyword">double</span> w=G[V][j].w;</span><br><span class="line">			f[v]=min(f[v],w);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	sort(road,road+h+<span class="number">1</span>);<span class="comment">//最小生成树边权排序</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.2lf\n"</span>,road[h-star+<span class="number">1</span>]);<span class="comment">//输出第S-1长的边</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>思路：</p>
+<p>这是一道模拟题，看了一下数据量，纯模拟可以过，按题意来看：</p>
+<p>ERR的情况：F与E不匹配和变量名冲突的</p>
+<p>No的情况：只有时间复杂度计算错误的</p>
+<p>Yes的情况：除以上两种情况外的</p>
+<p>其实还有隐藏的条件：</p>
+<ul>
+<li><p>1.F x 1 1 为O(1)</p>
+</li>
+<li><p>2.F x 1 n 为O(n)</p>
+</li>
+<li><p>3.F x 32 n 为O(n)</p>
+</li>
+<li><p>4.F x n 1 为O(1) 且此语句不执行，因为n远大于100</p>
+</li>
+<li><p>5.并列的For语句复杂度取最高次项值</p>
+</li>
+<li><p>6.F x n n 为O(1)</p>
+</li>
+<li><p>5.F x 8 2 为O(1) 且此语句不执行，因为8大于2</p>
+</li>
+<li><p>6.不执行的语句若下面嵌套了新的For语句也要扫描下去，以防出现ERR的情况</p>
+</li>
+</ul>
+<p>代码实现：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">char</span> o[<span class="number">1000</span>]=&#123;<span class="number">0</span>&#125;;<span class="comment">//存当前读入的复杂度</span></span><br><span class="line"><span class="keyword">int</span> n,nowl,data[<span class="number">500</span>],ans=<span class="number">0</span>;<span class="comment">//data存用了的变量及其值</span></span><br><span class="line"><span class="keyword">bool</span> erk=<span class="literal">false</span>,erp=<span class="literal">false</span>;<span class="comment">//erk判断是否少了E，erp判断变量重复</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">read</span><span class="params">(<span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> nd=<span class="number">0</span>,rd=<span class="number">0</span>,pdlt=<span class="number">0</span>;<span class="comment">//nd 目前n的次数，rd目前循环数</span></span><br><span class="line">    <span class="keyword">bool</span> pdl=<span class="literal">false</span>,pdk[<span class="number">1000</span>];<span class="comment">//pdl后面嵌套的for语句是否无效，pdk记录第几次循环n的次数+1</span></span><br><span class="line">    <span class="built_in">memset</span>(pdk,<span class="literal">false</span>,<span class="keyword">sizeof</span>(pdk));</span><br><span class="line">    <span class="keyword">char</span> bl[<span class="number">1000</span>]=&#123;<span class="number">0</span>&#125;;<span class="comment">//存变量名</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> b=<span class="number">1</span>;b&lt;=r;b++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">char</span> g;</span><br><span class="line">        <span class="built_in">string</span> x,y;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;g;</span><br><span class="line">        <span class="keyword">if</span>(g==<span class="string">'F'</span>)</span><br><span class="line">        &#123;</span><br><span class="line">        	<span class="keyword">int</span> j=<span class="number">0</span>,k=<span class="number">0</span>,m=<span class="number">0</span>,n=<span class="number">0</span>;</span><br><span class="line">        	rd++;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;bl[rd];</span><br><span class="line">            <span class="keyword">if</span>(data[(<span class="keyword">int</span>)bl[rd]]!=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                erp=<span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">            <span class="keyword">if</span>(pdl==<span class="literal">true</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(x[<span class="number">0</span>]&gt;=<span class="string">'0'</span>&amp;&amp;x[<span class="number">0</span>]&lt;=<span class="string">'9'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">while</span>(x[<span class="number">0</span>+j]&gt;=<span class="string">'0'</span>&amp;&amp;x[<span class="number">0</span>+j]&lt;=<span class="string">'9'</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    k=k*<span class="number">10</span>+x[<span class="number">0</span>+j]<span class="number">-48</span>;</span><br><span class="line">                    j++;</span><br><span class="line">                &#125;</span><br><span class="line">                data[(<span class="keyword">int</span>)bl[rd]]=k;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(x[<span class="number">0</span>]==n)</span><br><span class="line">                &#123;</span><br><span class="line">                    data[(<span class="keyword">int</span>)bl[rd]]=<span class="number">100</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    data[(<span class="keyword">int</span>)bl[rd]]=data[(<span class="keyword">int</span>)x[<span class="number">0</span>]];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(y[<span class="number">0</span>]&gt;=<span class="string">'0'</span>&amp;&amp;y[<span class="number">0</span>]&lt;=<span class="string">'9'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">while</span>(y[<span class="number">0</span>+m]&gt;=<span class="string">'0'</span>&amp;&amp;y[<span class="number">0</span>+m]&lt;=<span class="string">'9'</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    n=n*<span class="number">10</span>+y[<span class="number">0</span>+m]<span class="number">-48</span>;</span><br><span class="line">                    m++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(data[(<span class="keyword">int</span>)bl[rd]]&gt;n)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span>(pdl==<span class="literal">false</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        pdlt=rd;</span><br><span class="line">                    &#125;</span><br><span class="line">                    pdl=<span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(data[(<span class="keyword">int</span>)bl[rd]]&gt;data[(<span class="keyword">int</span>)y[<span class="number">0</span>]])</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span>(pdl==<span class="literal">false</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        pdlt=rd;</span><br><span class="line">                    &#125;</span><br><span class="line">                    pdl=<span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(y[<span class="number">0</span>]==<span class="string">'n'</span>&amp;&amp;x[<span class="number">0</span>]!=<span class="string">'n'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                nd++;</span><br><span class="line">                ans=max(nd,ans);</span><br><span class="line">                pdk[rd]=<span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(g==<span class="string">'E'</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(rd&lt;<span class="number">0</span>)</span><br><span class="line">            &#123;     </span><br><span class="line">                erp=<span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">            	data[(<span class="keyword">int</span>)bl[rd]]=<span class="number">0</span>;</span><br><span class="line">                <span class="keyword">if</span>(pdlt==rd)</span><br><span class="line">                &#123;</span><br><span class="line">                    pdl=<span class="literal">false</span>;</span><br><span class="line">                    pdlt=<span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(pdk[rd]==<span class="literal">true</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    nd--;</span><br><span class="line">                    pdk[rd]=<span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                rd--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(rd!=<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        erk=<span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        erk=<span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> a=<span class="number">1</span>;a&lt;=n;a++)</span><br><span class="line">    &#123;</span><br><span class="line">    	erp=<span class="literal">false</span>;</span><br><span class="line">    	<span class="keyword">bool</span> er=<span class="literal">false</span>;</span><br><span class="line">        <span class="built_in">memset</span>(data,<span class="number">0</span>,<span class="keyword">sizeof</span>(data));</span><br><span class="line">        ans=<span class="number">0</span>;</span><br><span class="line">        erk=<span class="literal">false</span>;</span><br><span class="line">        data[(<span class="keyword">int</span>)<span class="string">'n'</span>]=<span class="number">100</span>;</span><br><span class="line">        <span class="keyword">bool</span> pd=<span class="literal">false</span>;<span class="comment">//判断读入复杂度是否为O(n^m)类型</span></span><br><span class="line">        <span class="keyword">int</span> fzd=<span class="number">0</span>,ld=<span class="number">0</span>;<span class="comment">///fzd读入的复杂度的数字部分</span></span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;nowl);</span><br><span class="line">        <span class="keyword">if</span>(nowl%<span class="number">2</span>!=<span class="number">0</span>)</span><br><span class="line">        &#123;           </span><br><span class="line">            er=<span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%c"</span>,&amp;o[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">while</span>(o[ld]!=<span class="string">'\n'</span>)</span><br><span class="line">        &#123;</span><br><span class="line">        	ld++;</span><br><span class="line">        	<span class="built_in">scanf</span>(<span class="string">"%c"</span>,&amp;o[ld]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(o[<span class="number">3</span>]==<span class="string">'n'</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> t=<span class="number">0</span>;</span><br><span class="line">            pd=<span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">while</span>(o[<span class="number">5</span>+t]&gt;=<span class="string">'0'</span>&amp;&amp;o[<span class="number">5</span>+t]&lt;=<span class="string">'9'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                fzd=fzd*<span class="number">10</span>+o[<span class="number">5</span>+t]<span class="number">-48</span>;</span><br><span class="line">                t++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            fzd=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        read(nowl);</span><br><span class="line">        <span class="keyword">if</span>(er==<span class="literal">true</span>||erk==<span class="literal">true</span>||erp==<span class="literal">true</span>)</span><br><span class="line">        &#123;</span><br><span class="line">        	<span class="built_in">cout</span>&lt;&lt;<span class="string">"ERR"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        	<span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(ans==<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(fzd==<span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">            	<span class="keyword">if</span>(pd==<span class="literal">true</span>)</span><br><span class="line">            	&#123;</span><br><span class="line">            		<span class="built_in">cout</span>&lt;&lt;<span class="string">"No"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            	&#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                	<span class="built_in">cout</span>&lt;&lt;<span class="string">"Yes"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">cout</span>&lt;&lt;<span class="string">"No"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(ans&gt;<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(fzd==ans)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">cout</span>&lt;&lt;<span class="string">"Yes"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">cout</span>&lt;&lt;<span class="string">"No"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>本题似乎可以在建图时把卫星作为节点处理，用于替换普通节点，不过要设置两卫星间边权为0。</p>
 <hr>
-<p>题目详见：<a href="https://www.luogu.org/problem/show?pid=P1991" target="_blank" rel="noopener">https://www.luogu.org/problem/show?pid=P1991</a></p>
+<p>题目详见:<a href="https://www.luogu.org/problemnew/show/P3952" target="_blank" rel="noopener">https://www.luogu.org/problemnew/show/P3952</a></p>
 
       
     </div>
@@ -561,8 +592,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/09/洛谷题解-UVA10369-【Arctic Network】/" rel="next" title="洛谷题解 UVA10369 【Arctic Network】">
-                <i class="fa fa-chevron-left"></i> 洛谷题解 UVA10369 【Arctic Network】
+              <a href="/2019/07/20/洛谷题解 P5019 【铺设道路】/" rel="next" title="洛谷题解 P5019 【铺设道路】">
+                <i class="fa fa-chevron-left"></i> 洛谷题解 P5019 【铺设道路】
               </a>
             
           </div>
@@ -570,6 +601,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/09/洛谷题解-UVA10369-【Arctic Network】/" rel="prev" title="洛谷题解 UVA10369 【Arctic Network】">
+                洛谷题解 UVA10369 【Arctic Network】 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -614,17 +649,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -809,23 +835,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#本题为最小生成树裸题，直接套模版按题意修改就行了"><span class="nav-number">1.</span> <span class="nav-text">本题为最小生成树裸题，直接套模版按题意修改就行了</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本题与UVA10369相同，但要注意UVA10369有多组数据，而P1991只有一组"><span class="nav-number">1.1.</span> <span class="nav-text">本题与UVA10369相同，但要注意UVA10369有多组数据，而P1991只有一组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AC代码（只能借鉴，不能抄哦）："><span class="nav-number">1.2.</span> <span class="nav-text">AC代码（只能借鉴，不能抄哦）：</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
@@ -1378,43 +1387,6 @@
   
   
 
-  
-    
-      <script type="text/x-mathjax-config">
-  
-
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-      
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    }
-  });
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-      for (i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-  });
-</script>
-<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-<style>
-.MathJax_Display {
-  overflow: auto hidden;
-}
-</style>
-
-    
   
 
 
