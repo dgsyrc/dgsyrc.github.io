@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[洛谷题解 P1821 【[USACO07FEB]银牛派对Silver Cow Party】]]></title>
+    <url>%2F2019%2F08%2F16%2F%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3%20P1821%20%E3%80%90%5BUSACO07FEB%5D%E9%93%B6%E7%89%9B%E6%B4%BE%E5%AF%B9Silver%20Cow%20Party%E3%80%91%2F</url>
+    <content type="text"><![CDATA[[USACO07FEB]银牛派对Silver Cow Party题意：有$n$头牛，$m$条路，所有牛要前往$X$牛的家开趴（当然$X$牛不用动），求其他牛去开趴来回的最短距离，输出最长的那条。 简化版题意：有$n$个节点，$m$条边，给出终点$X$，求其他节点到终点的来回最短距离，输出最长的距离。 注意：该题所给的边为有向边，别瞎*2输出使用的算法：SPFA思路：题目要找其他点到终点$X$的最短路径和终点$X$到其他点的最短路径。为便于代码实现，要进行反向建图，用SPFA跑正向的图求终点$X$到其他点的最短路径，再用跑反向图求其他点到终点$X$的最短路径。 反向图即将边的起点和终点反过来，边权不变。 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273#include&lt;iostream&gt;#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;queue&gt;#include&lt;vector&gt;using namespace std;struct edge&#123; int u,v; &#125;;vector&lt;edge&gt; G[3][1001];//动态数组存边queue&lt;int&gt; Q;//队列（STL大法好）int n,m,f[3][1001],l,ans;bool vis[1001];void spfa(int k)//k=1时正向图，k=2时反向图&#123; memset(vis,0,sizeof(vis));//初始化false vis[l]=true; f[k][l]=0; Q.push(l); while(!Q.empty()) &#123; int news=Q.front(); Q.pop(); vis[news]=false; for(int i=0;i&lt;G[k][news].size();i++) &#123; int v=G[k][news][i].v,u=G[k][news][i].u; if(f[k][v]&gt;f[k][news]+u) &#123; f[k][v]=f[k][news]+u; if(!vis[v]) &#123; vis[v]=true; Q.push(v); &#125; &#125; &#125; &#125;&#125;int main()&#123; scanf("%d%d%d",&amp;n,&amp;m,&amp;l); memset(f,0x3f3f3f,sizeof(f)); for(int a=1;a&lt;=m;a++) &#123; int x,y,z; scanf("%d%d%d",&amp;x,&amp;y,&amp;z); edge cmp; cmp.v=y; cmp.u=z; G[1][x].push_back(cmp);//正向建图 cmp.v=x; G[2][y].push_back(cmp);//反向建图 &#125; spfa(1);//跑正向图 spfa(2);//跑反向图 for(int a=1;a&lt;=n;a++) &#123; if(a==l) &#123; continue; &#125; ans=max(f[1][a]+f[2][a],ans);//找最长的 &#125; printf("%d\n",ans); return 0;&#125; 题目详见:https://www.luogu.org/problemnew/show/P1821]]></content>
+      <tags>
+        <tag>题解</tag>
+        <tag>洛谷</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[洛谷题解 P2872 【[USACO07DEC]道路建设Building Roads】]]></title>
     <url>%2F2019%2F08%2F16%2F%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3%20P2872%20%E3%80%90%5BUSACO07DEC%5D%E9%81%93%E8%B7%AF%E5%BB%BA%E8%AE%BEBuilding%20Roads%E3%80%91%2F</url>
     <content type="text"><![CDATA[道路建设题意：给你$n$个农场的坐标，给出$m$条已经存在的路（连接农场$i$与农场$j$），求最少要修建多长的路才能把所有农场连接起来。 上面的太啰嗦了，再简化一下：给你$n$个节点，给出$m$条权值为0的边，每个节点彼此有一条边连接，边权值为两点的欧几里得距离，求该图的最小生成树大小。 欧几里得距离公式：$dis=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$ 这道题我是用$Prim$做的，感觉$Prim$更好些，1000个点100条边算稀疏图吧一定要注意在计算欧几里得距离时要在$sqrt()$里加double，不然就会卡精度WA2个点 （别问我怎么知道的） 代码解析：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104#include&lt;iostream&gt;#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;vector&gt;#include&lt;cmath&gt;#define INF 20000000 //题中给出的没有那么大，但是开大点不会错using namespace std;struct edge&#123; double w;//边权 int v;//终点&#125;;vector&lt;edge&gt; G[1010];//动态数组存边int n,m,zb[1010][3],head;bool pd[1010][1010],vis[1010];double ans=0,f[1010];double dis(int xa,int ya,int xb,int yb)//求欧几里得距离&#123; return sqrt((double)(xa-xb)*(xa-xb)+(double)(ya-yb)*(ya-yb));//注意此处的两个double，被卡WA了两次&#125;int main()&#123; scanf("%d%d",&amp;n,&amp;m); for(int a=1;a&lt;=n;a++) &#123; scanf("%d%d",&amp;zb[a][1],&amp;zb[a][2]);//读入坐标 &#125; for(int a=1;a&lt;=m;a++)//标记0权边 &#123; int x,y; scanf("%d%d",&amp;x,&amp;y); pd[x][y]=true; pd[y][x]=true; &#125; for(int a=1;a&lt;=n;a++) &#123; for(int b=1;b&lt;=n;b++) &#123; if(a==b) &#123; continue; &#125; else &#123; edge cmp; cmp.v=b; if(pd[a][b]==true)//如果被标记边权为0 &#123; cmp.w=0; &#125; else &#123; cmp.w=dis(zb[a][1],zb[a][2],zb[b][1],zb[b][2]); &#125; G[a].push_back(cmp);//存边 &#125; &#125; &#125; for(int a=1;a&lt;=n;a++)//初始化，赋极值 &#123; f[a]=INF; &#125; //下方为Prim部分 for(int a=0;a&lt;G[1].size();a++)//预处理 &#123; int v=G[1][a].v; double w=G[1][a].w; f[v]=min(f[v],w); &#125; vis[1]=true;//标记该节点已在最小生成树中 for(int i=1;i&lt;=n-1;i++)//n个节点，当然n-1条边 &#123; int V; double W=INF;//赋极值 for(int j=1;j&lt;=n;j++) &#123; if(vis[j]) &#123; continue; &#125; if(f[j]&lt;W) &#123; W=f[j]; V=j; &#125; &#125; ans=ans+W;//统计最小生成树大小 vis[V]=true;//标记该节点已在最小生成树中 for(int a=0;a&lt;G[V].size();a++) &#123; int v=G[V][a].v; double w=G[V][a].w; f[v]=min(f[v],w); &#125; &#125; printf("%.2lf\n",ans);//输出 return 0;//好习惯&#125; 题目详见:https://www.luogu.org/problemnew/show/P2872]]></content>
@@ -164,8 +173,8 @@
     <url>%2F2019%2F01%2F17%2F%E6%B4%9B%E8%B0%B7%E7%AE%A1%E7%90%86%E8%AF%AD%E5%BD%95%EF%BC%881%EF%BC%89%2F</url>
     <content type="text"><![CDATA[]]></content>
       <tags>
-        <tag>图片</tag>
         <tag>洛谷</tag>
+        <tag>图片</tag>
       </tags>
   </entry>
   <entry>
