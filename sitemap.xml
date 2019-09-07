@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dgsyrc.github.io/other/index.html</loc>
+    
+    <lastmod>2019-09-07T07:29:03.939Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://dgsyrc.github.io/2019/08/16/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3%20P1821%20%E3%80%90%5BUSACO07FEB%5D%E9%93%B6%E7%89%9B%E6%B4%BE%E5%AF%B9Silver%20Cow%20Party%E3%80%91/</loc>
     
     <lastmod>2019-08-16T09:09:53.197Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://dgsyrc.github.io/2019/08/09/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3-UVA10369-%E3%80%90Arctic%20Network%E3%80%91/</loc>
     
     <lastmod>2019-08-09T06:55:21.737Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://dgsyrc.github.io/other/index.html</loc>
-    
-    <lastmod>2019-07-19T00:24:40.247Z</lastmod>
     
   </url>
   
@@ -247,14 +247,14 @@
   </url>
   
   <url>
-    <loc>https://dgsyrc.github.io/lib/bookmark/README.html</loc>
+    <loc>https://dgsyrc.github.io/lib/bookmark/package.json</loc>
     
     <lastmod>2019-01-06T05:59:48.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dgsyrc.github.io/lib/bookmark/package.json</loc>
+    <loc>https://dgsyrc.github.io/lib/bookmark/README.html</loc>
     
     <lastmod>2019-01-06T05:59:48.000Z</lastmod>
     
