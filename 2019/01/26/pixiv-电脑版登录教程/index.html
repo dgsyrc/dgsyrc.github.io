@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -176,7 +176,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -186,7 +186,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta">
     
@@ -379,20 +379,20 @@
 
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://dgsyrc.github.io/2019/01/26/pixiv-电脑版登录教程/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YRC">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/main.png">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="YRC的博客">
     </span>
 
@@ -516,21 +516,21 @@
 <p>不说这么多，基本上看图就懂。</p>
 <h2 id="下载配置包"><a href="#下载配置包" class="headerlink" title="下载配置包"></a>下载配置包</h2><p>链接：<a href="https://github.com/dgsyrc/file/blob/master/Pixiv.rar?raw=true" target="_blank" rel="noopener">https://github.com/dgsyrc/file/blob/master/Pixiv.rar?raw=true</a></p>
 <p>把配置包解压到纯英文字母路径的目录下（推荐D:)</p>
-<h2 id="安装证书"><a href="#安装证书" class="headerlink" title="安装证书"></a>安装证书</h2><p><img src="1.png" alt=""></p>
-<h2 id="更改host"><a href="#更改host" class="headerlink" title="更改host"></a>更改host</h2><p><img src="2.png" alt=""></p>
+<h2 id="安装证书"><a href="#安装证书" class="headerlink" title="安装证书"></a>安装证书</h2><p><img src="1.png" alt></p>
+<h2 id="更改host"><a href="#更改host" class="headerlink" title="更改host"></a>更改host</h2><p><img src="2.png" alt></p>
 <p>host目录在 C:\Windows\System32\drivers\etc 下</p>
 <p>打开host，把下面的东西复制在host文件里</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1       www.google.com</span><br><span class="line">#Pixiv Start</span><br><span class="line">127.0.0.1       pixiv.net </span><br><span class="line">127.0.0.1       www.pixiv.net </span><br><span class="line">127.0.0.1       ssl.pixiv.net</span><br><span class="line">127.0.0.1       accounts.pixiv.net </span><br><span class="line">127.0.0.1       touch.pixiv.net</span><br><span class="line">127.0.0.1       oauth.secure.pixiv.net</span><br><span class="line">127.0.0.1       dic.pixiv.net</span><br><span class="line">127.0.0.1       en-dic.pixiv.net </span><br><span class="line">127.0.0.1       sketch.pixiv.net</span><br><span class="line">127.0.0.1       payment.pixiv.net</span><br><span class="line">127.0.0.1       factory.pixiv.net </span><br><span class="line">127.0.0.1       comic.pixiv.net  </span><br><span class="line">127.0.0.1       novel.pixiv.net </span><br><span class="line">127.0.0.1       imgaz.pixiv.net </span><br><span class="line">127.0.0.1       sensei.pixiv.net</span><br><span class="line">127.0.0.1       fanbox.pixiv.net</span><br><span class="line">210.140.92.136  i.pximg.net</span><br><span class="line">210.140.131.145 source.pixiv.net</span><br><span class="line">210.129.120.50  app-api.pixiv.net  </span><br><span class="line">74.120.148.207  g-client-proxy.pixiv.net </span><br><span class="line">210.140.131.145 i1.pixiv.net </span><br><span class="line">210.140.131.145 i2.pixiv.net </span><br><span class="line">210.140.131.145 i3.pixiv.net </span><br><span class="line">210.140.131.145 i4.pixiv.net </span><br><span class="line">210.140.131.159 d.pixiv.org </span><br><span class="line">210.140.92.135  pixiv.pximg.net  </span><br><span class="line">210.140.92.134  s.pximg.net</span><br><span class="line">#Pixiv End</span><br></pre></td></tr></table></figure>
 
-<h2 id="运行工具"><a href="#运行工具" class="headerlink" title="运行工具"></a>运行工具</h2><p><img src="3.png" alt=""></p>
+<h2 id="运行工具"><a href="#运行工具" class="headerlink" title="运行工具"></a>运行工具</h2><p><img src="3.png" alt></p>
 <p>打开后按下这个按钮</p>
-<p><img src="4.png" alt=""></p>
+<p><img src="4.png" alt></p>
 <h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>请使用firefox浏览器，谷歌chrome和国内浏览器不行</p>
 <p>打开pixiv.net后，如图操作：</p>
-<p><img src="5.png" alt=""></p>
+<p><img src="5.png" alt></p>
 <p>确认安全例外后即可，若登陆页出现相同情况，进行相同操作即可</p>
 <h2 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h2><p>更详细的的教程（我就是参考了这篇才成功的）：<a href="https://2heng.xin/2017/09/19/pixiv/" target="_blank" rel="noopener">https://2heng.xin/2017/09/19/pixiv/</a></p>
-<p><img src="1.jpg" alt=""></p>
+<p><img src="1.jpg" alt></p>
 
       
     </div>
@@ -658,7 +658,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/images/main.png" alt="YRC">
             
@@ -673,7 +673,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">31</span>
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -720,7 +720,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">16</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -891,7 +903,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">45k</span>
+    <span title="站点总字数">47k</span>
   
 
   
@@ -900,7 +912,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">41 分钟</span>
+    <span title="站点阅读时长">43 分钟</span>
   
 </div>
 

@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -183,7 +183,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -193,7 +193,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta">
     
@@ -386,20 +386,20 @@
 
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://dgsyrc.github.io/2019/02/01/Hexo博客搭建说明书（指北书）/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YRC">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/main.png">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="YRC的博客">
     </span>
 
@@ -543,9 +543,9 @@
 <p>输入<code>hexo s</code>启动Hexo，打开浏览器输入地址<code>localhost:4000</code>查看</p>
 <h3 id="云端："><a href="#云端：" class="headerlink" title="云端："></a>云端：</h3><p>在github上新建存储库<code>你的github用户名.github.io</code></p>
 <p>进入存储库后，打开这里：</p>
-<p><img src="12.jpg" alt=""></p>
+<p><img src="12.jpg" alt></p>
 <p>找到这行并修改成如下：</p>
-<p><img src="13.jpg" alt=""></p>
+<p><img src="13.jpg" alt></p>
 <p>在Git Bash中输入<code>ssh-keygen</code>生成SSH密钥，并按三次回车，随后用记事本打开<code>C:\Users\Administrator\.ssh\id_rsa.pub</code>（本目录因电脑而异，大部分相同），把内容复制下来，打开<code>https://github.com/settings/keys</code>,新建一个SSH Key，粘贴key项目内（title随便填），最后按下add SSh key。</p>
 <p>回到Git Bash，输入<code>ssh -T git@github.com</code>,若显示<code>Hi!xxxx</code>的字眼，则代表成功。</p>
 <p>接下来输入<code>npm install hexo-deployer-git --save</code>安装上传工具deployer</p>
@@ -574,7 +574,7 @@
 
 <h3 id="博客图标："><a href="#博客图标：" class="headerlink" title="博客图标："></a>博客图标：</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">favicon:</span></span><br><span class="line">  <span class="comment"># 网站图标-放在主题目录下/source/images/,按照你的图标名修改以下两行即可</span></span><br><span class="line"><span class="attr">  small:</span> <span class="string">/images/favicon-16x16-next.png</span></span><br><span class="line"><span class="attr">  medium:</span> <span class="string">/images/favicon-32x32-next.png</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="目录："><a href="#目录：" class="headerlink" title="目录："></a>目录：</h3><h4 id="主目录："><a href="#主目录：" class="headerlink" title="主目录："></a>主目录：</h4><p><img src="1.jpg" alt=""></p>
+<h3 id="目录："><a href="#目录：" class="headerlink" title="目录："></a>目录：</h3><h4 id="主目录："><a href="#主目录：" class="headerlink" title="主目录："></a>主目录：</h4><p><img src="1.jpg" alt></p>
 <p>按个人所需使用，每行设置前加#的为不显示。</p>
 <p>home 主页</p>
 <p>about 关于</p>
@@ -585,14 +585,14 @@
 <p>图标的名字参照<a href="https://fontawesome.com/icons?d=gallery" target="_blank" rel="noopener">官网</a></p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="comment"># 目录</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">home</span></span><br><span class="line"><span class="attr">  about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">user</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span></span><br><span class="line">  <span class="comment"># categories: /categories/ || th</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span></span><br><span class="line">  <span class="comment"># schedule: /schedule/ || calendar</span></span><br><span class="line">  <span class="comment"># sitemap: /sitemap.xml || sitemap</span></span><br><span class="line">  <span class="comment"># commonweal: 404.html || false</span></span><br><span class="line">  <span class="comment"># 加#号的用处不大，在此不赘述（且要安装插件）</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="文章内部目录栏"><a href="#文章内部目录栏" class="headerlink" title="文章内部目录栏"></a>文章内部目录栏</h4><p><img src="2.jpg" alt=""></p>
+<h4 id="文章内部目录栏"><a href="#文章内部目录栏" class="headerlink" title="文章内部目录栏"></a>文章内部目录栏</h4><p><img src="2.jpg" alt></p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">toc:</span></span><br><span class="line">  <span class="comment"># 是否生成文章目录</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 目录是否自动添加序号</span></span><br><span class="line"><span class="attr">  number:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 目录中的字符长度若大于目录栏宽度，多余的字符则放下一行，否则多余字符以省略号代替</span></span><br><span class="line"><span class="attr">  wrap:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># 默认即可</span></span><br><span class="line"><span class="attr">  max_depth:</span> <span class="number">6</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="目录栏的位置："><a href="#目录栏的位置：" class="headerlink" title="目录栏的位置："></a>目录栏的位置：</h4><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">sidebar:</span></span><br><span class="line">  <span class="comment"># 目录栏在博客中的位置 left | right (only for Pisces | Gemini).</span></span><br><span class="line"><span class="attr">  position:</span> <span class="string">left</span></span><br><span class="line">  <span class="comment">#position: right</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="设置主题风格"><a href="#设置主题风格" class="headerlink" title="设置主题风格"></a>设置主题风格</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment"># NexT主题下的四种风格</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Gemini</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="社交网站"><a href="#社交网站" class="headerlink" title="社交网站"></a>社交网站</h3><p><img src="3.jpg" alt=""></p>
+<h3 id="社交网站"><a href="#社交网站" class="headerlink" title="社交网站"></a>社交网站</h3><p><img src="3.jpg" alt></p>
 <p>|| 后面的仍为图标名，参照上文中目录图标设置即可。</p>
 <p>例子：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">social:</span></span><br><span class="line">  <span class="comment"># 社交网站</span></span><br><span class="line"><span class="attr">  GitHub:</span> <span class="attr">https://github.com/dgsyrc</span> <span class="string">||</span> <span class="string">github</span></span><br><span class="line"><span class="attr">  E-Mail:</span> <span class="attr">mailto:yrcminecraft@qq.com</span> <span class="string">||</span> <span class="string">envelope</span></span><br><span class="line"><span class="attr">  luogu:</span> <span class="attr">https://www.luogu.org/space/show?uid=89910</span> <span class="string">||</span> <span class="string">code</span></span><br><span class="line"><span class="attr">  bilibili:</span> <span class="attr">http://space.bilibili.com/179225431?</span> <span class="string">||</span> <span class="string">tv</span></span><br></pre></td></tr></table></figure>
@@ -600,12 +600,12 @@
 <p>若不想显示图标，则将下面这行设置为<code>false</code>.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">social_icons:</span><br><span class="line">  # 不显示图标</span><br><span class="line">  enable: false</span><br><span class="line">  # 只显示图标</span><br><span class="line">  icons_only: false</span><br></pre></td></tr></table></figure>
 
-<h3 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接"></a>友情链接</h3><p><img src="4.jpg" alt=""></p>
+<h3 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接"></a>友情链接</h3><p><img src="4.jpg" alt></p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 标题前图标</span></span><br><span class="line"><span class="attr">links_icon:</span> <span class="string">link</span></span><br><span class="line"><span class="comment"># 标题</span></span><br><span class="line"><span class="attr">links_title:</span> <span class="string">友情链接(部分需翻墙)</span></span><br><span class="line"><span class="comment"># 排版设置（不加#为设置项，加#不设置，二者不可~~得兼~~同时设置）</span></span><br><span class="line"><span class="comment">#一行一个</span></span><br><span class="line"><span class="comment">#links_layout: block </span></span><br><span class="line"><span class="comment">#一行多个</span></span><br><span class="line"><span class="attr">links_layout:</span> <span class="string">inline</span></span><br><span class="line"><span class="comment"># 链接</span></span><br><span class="line"><span class="attr">links:</span></span><br><span class="line"><span class="attr">  cloudflare:</span> <span class="attr">https://dash.cloudflare.com</span></span><br><span class="line"><span class="attr">  freenom:</span> <span class="attr">https://my.freenom.com/clientarea.php</span></span><br><span class="line">  <span class="string">Minecraft</span> <span class="attr">Wiki:</span> <span class="attr">https://minecraft-zh.gamepedia.com/Minecraft_Wiki</span></span><br><span class="line"><span class="attr">  Pixiv:</span> <span class="attr">https://www.pixiv.net</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="头像"><a href="#头像" class="headerlink" title="头像"></a>头像</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 头像</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># 头像地址（以根目录下的source为根目录的地址，而非主题下的source）</span></span><br><span class="line"><span class="attr">  url:</span> <span class="string">/images/main.png</span></span><br><span class="line">  <span class="comment"># 头像圆形</span></span><br><span class="line"><span class="attr">  rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 0不显示头像，1显示</span></span><br><span class="line"><span class="attr">  opacity:</span> <span class="number">1</span></span><br><span class="line">  <span class="comment"># 头像旋转</span></span><br><span class="line"><span class="attr">  rotated:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="返回顶部按钮："><a href="#返回顶部按钮：" class="headerlink" title="返回顶部按钮："></a>返回顶部按钮：</h3><p><img src="5.jpg" alt=""></p>
+<h3 id="返回顶部按钮："><a href="#返回顶部按钮：" class="headerlink" title="返回顶部按钮："></a>返回顶部按钮：</h3><p><img src="5.jpg" alt></p>
 <p>找到如下代码：</p>
 <p><code>b2t: true</code>为显示，<code>b2t: false</code>为不显示。</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 返回顶部按钮</span></span><br><span class="line"><span class="attr">  b2t:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 显示阅读百分比</span></span><br><span class="line"><span class="attr">  scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
@@ -613,7 +613,7 @@
 <h3 id="阅读全文按钮："><a href="#阅读全文按钮：" class="headerlink" title="阅读全文按钮："></a>阅读全文按钮：</h3><p><code>enable: true</code>为主页显示全文，<code>enable: false</code>为主页不显示全文。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">auto_excerpt:</span><br><span class="line">  enable: true</span><br><span class="line">  # 主页每篇文章显示字数</span><br><span class="line">  length: 150</span><br><span class="line"># 在主页是否显示阅读全文按钮</span><br><span class="line">read_more_btn: true</span><br></pre></td></tr></table></figure>
 
-<h3 id="文章字数-阅读时长统计"><a href="#文章字数-阅读时长统计" class="headerlink" title="文章字数/阅读时长统计"></a>文章字数/阅读时长统计</h3><p><img src="6.jpg" alt=""></p>
+<h3 id="文章字数-阅读时长统计"><a href="#文章字数-阅读时长统计" class="headerlink" title="文章字数/阅读时长统计"></a>文章字数/阅读时长统计</h3><p><img src="6.jpg" alt></p>
 <p>在Git Bash中输入以下指令，安装插件。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
 
@@ -630,21 +630,21 @@
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="comment"># 是否启用</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  per_page:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 推荐使用mathjax</span></span><br><span class="line"><span class="attr">  engine:</span> <span class="string">mathjax</span></span><br><span class="line">  <span class="comment">#engine: katex</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="分享"><a href="#分享" class="headerlink" title="分享"></a>分享</h3><p>页面左边浮动按钮：</p>
-<p><img src="7.jpg" alt=""></p>
+<p><img src="7.jpg" alt></p>
 <p>文章底部：</p>
-<p><img src="8.jpg" alt=""></p>
+<p><img src="8.jpg" alt></p>
 <p>在Git Bash中输入<code>git clone https://github.com/theme-next/theme-next-needmoreshare2 source/lib/needsharebutton</code>安装插件。</p>
 <p>修改如下配置：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">needmoreshare2:</span></span><br><span class="line"><span class="comment"># 添加分享按钮</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  postbottom:</span></span><br><span class="line">  <span class="comment"># 每一篇文章底部显示按钮</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    options:</span></span><br><span class="line"><span class="attr">      iconStyle:</span> <span class="string">box</span></span><br><span class="line"><span class="attr">      boxForm:</span> <span class="string">horizontal</span></span><br><span class="line"><span class="attr">      position:</span> <span class="string">bottomCenter</span></span><br><span class="line"><span class="attr">      networks:</span> <span class="string">Weibo,Wechat,Douban,QQZone,Twitter,Facebook</span></span><br><span class="line"><span class="attr">  float:</span></span><br><span class="line">  <span class="comment"># 页面左边显示浮动按钮</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    options:</span></span><br><span class="line"><span class="attr">      iconStyle:</span> <span class="string">box</span></span><br><span class="line"><span class="attr">      boxForm:</span> <span class="string">horizontal</span></span><br><span class="line"><span class="attr">      position:</span> <span class="string">middleRight</span></span><br><span class="line"><span class="attr">      networks:</span> <span class="string">Weibo,Wechat,Douban,QQZone,Twitter,Facebook</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="访问统计"><a href="#访问统计" class="headerlink" title="访问统计"></a>访问统计</h3><p>文章访问统计：</p>
-<p><img src="9.jpg" alt=""></p>
+<p><img src="9.jpg" alt></p>
 <p>博客访问统计：</p>
-<p><img src="10.jpg" alt=""></p>
+<p><img src="10.jpg" alt></p>
 <p>修改如下设置即可：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">busuanzi_count:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_visitors:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_visitors_icon:</span> <span class="string">user</span></span><br><span class="line"><span class="attr">  total_views:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_views_icon:</span> <span class="string">eye</span></span><br><span class="line"><span class="attr">  post_views:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  post_views_icon:</span> <span class="string">eye</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="站内搜索"><a href="#站内搜索" class="headerlink" title="站内搜索"></a>站内搜索</h3><p><img src="11.jpg" alt=""></p>
+<h3 id="站内搜索"><a href="#站内搜索" class="headerlink" title="站内搜索"></a>站内搜索</h3><p><img src="11.jpg" alt></p>
 <p>在Git Bash中输入<code>npm install hexo-generator-searchdb --save</code>安装插件。</p>
 <p>在博客目录下的<code>_config.yml</code>添加如下设置：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
@@ -813,7 +813,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/images/main.png" alt="YRC">
             
@@ -828,7 +828,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">31</span>
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -875,7 +875,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">16</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1046,7 +1058,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">45k</span>
+    <span title="站点总字数">47k</span>
   
 
   
@@ -1055,7 +1067,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">41 分钟</span>
+    <span title="站点阅读时长">43 分钟</span>
   
 </div>
 
