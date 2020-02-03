@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dgsyrc.github.io/2020/02/02/PS%E5%B0%8F%E6%8A%80%E5%B7%A7-%E6%8F%90%E5%8F%96%E7%BA%BF%E7%A8%BF/</loc>
+    
+    <lastmod>2020-02-03T12:01:13.793Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://dgsyrc.github.io/2020/01/17/%E5%8F%A3%E6%8A%80-%E4%B8%9C%E8%8E%9E%E4%B8%AD%E5%AD%A6%E7%89%88/</loc>
     
     <lastmod>2020-01-17T14:17:47.079Z</lastmod>
@@ -289,14 +296,14 @@
   </url>
   
   <url>
-    <loc>https://dgsyrc.github.io/lib/bookmark/README.html</loc>
+    <loc>https://dgsyrc.github.io/lib/bookmark/package.json</loc>
     
     <lastmod>2019-01-06T05:59:48.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dgsyrc.github.io/lib/bookmark/package.json</loc>
+    <loc>https://dgsyrc.github.io/lib/bookmark/README.html</loc>
     
     <lastmod>2019-01-06T05:59:48.000Z</lastmod>
     
