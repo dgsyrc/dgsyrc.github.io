@@ -101,7 +101,7 @@
 
 
   <meta name="description" content="相信许多MC玩家想要在自己家中和别人联机开黑 但是如果跨网了，那怎么联机呢？ 经过我3个小时仔细研究，总算成功了。 注： 1.本文是以官方服务端的1.14.2版本为例，后文部分配置项名称不一定与读者的实际名称相同，但是肯定是相似的，请自行变通。 2.本文暂无插件，mod配置教程 以下就是教程： 下载服务端：注：本文使用的是官方服务端 根据你的需要的版本进行选择 下载地址 在网页中选择你要Downl">
-<meta name="keywords" content="教程,Minecraft,我的世界,game">
+<meta name="keywords" content="教程,我的世界,Minecraft,game">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何搭建一个属于自己的Minecraft服务器">
 <meta property="og:url" content="https://dgsyrc.github.io/2020/03/14/如何搭建一个属于自己的Minecraft服务器/index.html">
@@ -111,7 +111,7 @@
 <meta property="og:image" content="https://dgsyrc.github.io/2020/03/14/如何搭建一个属于自己的Minecraft服务器/1.png">
 <meta property="og:image" content="https://dgsyrc.github.io/2020/03/14/如何搭建一个属于自己的Minecraft服务器/2.png">
 <meta property="og:image" content="https://dgsyrc.github.io/2020/03/14/如何搭建一个属于自己的Minecraft服务器/3.png">
-<meta property="og:updated_time" content="2020-03-14T10:08:49.044Z">
+<meta property="og:updated_time" content="2020-03-14T10:41:01.100Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何搭建一个属于自己的Minecraft服务器">
 <meta name="twitter:description" content="相信许多MC玩家想要在自己家中和别人联机开黑 但是如果跨网了，那怎么联机呢？ 经过我3个小时仔细研究，总算成功了。 注： 1.本文是以官方服务端的1.14.2版本为例，后文部分配置项名称不一定与读者的实际名称相同，但是肯定是相似的，请自行变通。 2.本文暂无插件，mod配置教程 以下就是教程： 下载服务端：注：本文使用的是官方服务端 根据你的需要的版本进行选择 下载地址 在网页中选择你要Downl">
@@ -441,7 +441,7 @@
                 
               
 
-              <time title="创建时间：2020-03-14 16:00:00 / 修改时间：18:08:49" itemprop="dateCreated datePublished" datetime="2020-03-14T16:00:00+08:00">2020-03-14</time>
+              <time title="创建时间：2020-03-14 16:00:00 / 修改时间：18:41:01" itemprop="dateCreated datePublished" datetime="2020-03-14T16:00:00+08:00">2020-03-14</time>
             
 
             
@@ -480,7 +480,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.7k</span>
+                <span title="本文字数">2.9k</span>
               
 
               
@@ -494,7 +494,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">3 分钟</span>
               
             </div>
           
@@ -531,6 +531,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@ECHO OFF</span><br><span class="line"></span><br><span class="line">@echo 正在开启中。。。</span><br><span class="line">start jre8/bin/java.exe -Xms1200M -Xmx1200M -jar server.jar</span><br><span class="line">@echo 已执行启动指令</span><br><span class="line">@echo 当弹出Java控制台时可以关闭该窗口!</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
 
 <p>其中<code>-Xms1200M</code>和<code>-Xmx1200M</code>分别为最大分配内存和最小分配内存，<code>M</code>即单位<code>MB</code>，当然也可以把单位改成<code>G</code>即单位<code>GB</code>。</p>
+<p><code>jre8/bin/java.exe</code>是你的java安装目录，笔者是独立放了一个java8在服务器文件夹内，如果您要使用自己电脑上默认安装的java，请依照实际填写，示例<code>start &quot;&quot; &quot;C:/Program Files/Java/jre1.8.0_241/bin/java.exe&quot; -Xms1200M -Xmx1200M -jar server.jar</code></p>
 <p>然后将<code>Start.txt</code>重命名为<code>Start.bat</code>,双击运行。</p>
 <p>（如果你的电脑默认不显示已知文件的后缀，请到<code>组织-文件夹和搜索选项-查看</code>中把<code>隐藏已知文件类型的扩展名</code>的勾去掉并点击应用）</p>
 <h5 id="同意协议："><a href="#同意协议：" class="headerlink" title="同意协议："></a>同意协议：</h5><p>第一次启动服务端时会马上闪退，同时你的文件夹下会生成<code>eula.txt</code>。</p>
@@ -675,9 +676,9 @@
           
             <a href="/tags/教程/" rel="tag"># 教程</a>
           
-            <a href="/tags/Minecraft/" rel="tag"># Minecraft</a>
-          
             <a href="/tags/我的世界/" rel="tag"># 我的世界</a>
+          
+            <a href="/tags/Minecraft/" rel="tag"># Minecraft</a>
           
             <a href="/tags/game/" rel="tag"># game</a>
           
@@ -1034,7 +1035,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">53k</span>
+    <span title="站点总字数">54k</span>
   
 
   
