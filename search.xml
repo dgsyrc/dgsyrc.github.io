@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[洛谷题解 CF810A 【Straight 《A》】]]></title>
+    <url>%2F2020%2F03%2F25%2F%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3%20CF810A%20%E3%80%90Straight%20%E3%80%8AA%E3%80%8B%E3%80%91%2F</url>
+    <content type="text"><![CDATA[这题的思路： 简单循环枚举即可，因为数据量小。 主要的问题在于四舍五入。 枚举虽然看起来偷懒，但是在赛场上在数据以及时间空间限制允许的情况下，总比你跑数论好（省做题时间）。 我们知道1.5、1.6、1.7、1.8、1.9、2.0、2.1、2.2、2.3、2.4四舍五入都为2，我们可以将其扩大十倍，即15、16、17、18、19、20、21、22、23、24。 由于C++中的/是整除，这样我们就可以判断当扩大后的数被整除后，与k*10的误差范围为-5~4时即可判断相等。 至于小数点后面第二位及以后的数其实对此影响不大，因为扩大十倍后15.00001在整除中还是15,24.999999在整除中还是24。 代码如下： 1234567891011121314151617181920212223242526#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;int n,k,num[110],cot=0,sum=0;int main()&#123; scanf("%d%d",&amp;n,&amp;k); k=k*10;//扩大十倍 for(int a=1;a&lt;=n;a++) &#123; scanf("%d",&amp;num[a]); sum=sum+num[a]*10;//扩大十倍 &#125; while(true)//无限循环判断 &#123; if((sum+cot*k)/(n+cot)&gt;=k-5&amp;&amp;(sum+cot*k)/(n+cot)&lt;k+5) &#123; printf("%d\n",cot); break; &#125; cot++;//累加k的个数 &#125; return 0;&#125; 题目详见:https://www.luogu.com.cn/problem/CF810A]]></content>
+      <tags>
+        <tag>题解</tag>
+        <tag>洛谷</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[OI模板题单]]></title>
     <url>%2F2020%2F03%2F22%2FOI%E6%A8%A1%E6%9D%BF%E9%A2%98%E5%8D%95%2F</url>
     <content type="text"><![CDATA[快速排序：P1177 【模板】快速排序 快速幂：P1226 【模板】快速幂||取余运算 最小生成树：P3366 【模板】最小生成树 P2330 [SCOI2005]繁忙的都市 P1546 [USACO3.1]最短网络 Agri-Net P2872 [USACO07DEC]Building Roads S P1547 [USACO05MAR]Out of Hay S P2820 局域网 P1991 无线通讯网 P1265 公路修建 P2212 [USACO14MAR]Watering the Fields S P1195 口袋的天空 并查集：P3367 【模板】并查集 P1551 亲戚 P3958 奶酪 P1455 搭配购买 P2078 朋友 P1111 修复公路 P1536 村村通 P2256 一中校运会之百米跑 P1892 [BOI2003]团伙 P2835 刻录光盘 P1197 [JSOI2008]星球大战 P2814 家谱 最短路：P3371 【模板】单源最短路径（弱化版） P4779 【模板】单源最短路径（标准版） P2910 [USACO08OPEN]Clear And Present Danger S P1359 租用游艇 P2984 [USACO10FEB]Chocolate Giving S P2935 [USACO09JAN]Best Spot S P1339 [USACO09OCT]Heat Wave G P1744 采购特价商品 P2299 Mzc和体委的争夺战 P1821 [USACO07FEB]Silver Cow Party S P1364 医院设置 P1529 [USACO2.4]回家 Bessie Come Home P3905 道路重建 P1629 邮递员送信 P2951 [USACO09OPEN]Hide and Seek S P2888 [USACO07NOV]Cow Hurdles S P2419 [USACO08JAN]Cow Contest S P1144 最短路计数 P1828 [USACO3.2]香甜的黄油 Sweet Butter P1576 最小花费 P2850 [USACO06DEC]Wormholes G P1931 套利 P2136 拉近距离 P1875 佳佳的魔法药水 P2384 最短路 P1119 灾后重建 素数筛：P3383 【模板】线性筛素数 负环：P3385 【模板】负环 树状数组：P3374 【模板】树状数组 1 P3368 【模板】树状数组 2 P5057 [CQOI2006]简单题 P2068 统计和 尺取法：UVA1121 【模板】尺取法（Subsequence） SP2176 【模板】尺取法进阶（FSEATS - Finding Seats） 扩展欧几里德：P1082 【模板】同余方程 P1516 青蛙的约会]]></content>
@@ -32,7 +41,7 @@
   <entry>
     <title><![CDATA[寒假自学计划安排（Updated）]]></title>
     <url>%2F2020%2F02%2F24%2F%E5%AF%92%E5%81%87%E8%87%AA%E5%AD%A6%E8%AE%A1%E5%88%92%E5%AE%89%E6%8E%92%EF%BC%88Updated%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[已延迟开学 44 天（UPD:2020-03-24） 前言：2020年是个神奇的一年， 这一年开头， 澳大利亚森林大火失控， 乌克兰客机坠毁， 英国脱欧， 新型冠状病毒广泛传播， 科比遇难， 横扫亚非的蝗灾， 频繁的地震， 以及……最长的一次寒假， 近一个月没出过门。 总不能在家没事干吧…… Game？ 打久了有点无聊。 Study？ 好像有点用，是不是枯燥了点？ Music？ 总不能一直听吧…… 不如把三个揉在一起？ 那就试一下吧！ 计划（方便排版，Monday为一周第一天）：第一周（2.10~2.16）： 第二周（2.17~2.23）： 第三周（2.24~3.1）： 第四周（3.2~3.8）： 第五周（3.9~3.15）： 第六周（3.16~3.23）： 第N周（?.?~?.?）：Game:主要是颓音游，有时是Minecraft。 音游：osu!、Cytoid、Arcaea、Lanota 还有皇室战争…… Music：多着呢…… 就列举几个吧： 《Flower Dance》 《Luv Letter》 《Bad Apple!!》 《チルノのパーフェクトさんすう教室》 《Bloom of Youth》 《雲流れ》 《U.N.オーエンは彼女なのか?》 《不思議の国のアリス》 《輝く針の小人族 ～ Little Princess》 《Intro》 其他详见歌单 进度登记：第一周（2.10~2.16）： 第二周（2.17~2.23）： 第三周（2.24~3.1）： 第四周（3.2~3.8）： 第五周（3.9~3.15）： 第六周（3.16~3.22）： 补充：UPD:2020-02-24广东解除了一级响应，降至二级（看来快开学了） UPD:2020-02-25广东省教育厅发文3月2日起进行在线教育，不得返校，返校时间另定 UPD:2020-02-26学校允许学生申请回校拿资料，由班级学生代表和班主任将资料从班上带到门卫交给学生 UPD:2020-03-02正式线上开学 UPD:2020-03-22国外确诊超25w]]></content>
+    <content type="text"><![CDATA[已延迟开学 44 天（UPD:2020-03-24） 前言：2020年是个神奇的一年， 这一年开头， 澳大利亚森林大火失控， 乌克兰客机坠毁， 英国脱欧， 新型冠状病毒广泛传播， 科比遇难， 横扫亚非的蝗灾， 频繁的地震， 美国股票连续4次熔断， 以及……最长的一次寒假， 近一个月没出过门。 总不能在家没事干吧…… Game？ 打久了有点无聊。 Study？ 好像有点用，是不是枯燥了点？ Music？ 总不能一直听吧…… 不如把三个揉在一起？ 那就试一下吧！ 计划（方便排版，Monday为一周第一天）：第一周（2.10~2.16）： 第二周（2.17~2.23）： 第三周（2.24~3.1）： 第四周（3.2~3.8）： 第五周（3.9~3.15）： 第六周（3.16~3.23）： 第N周（?.?~?.?）：Game:主要是颓音游，有时是Minecraft。 音游：osu!、Cytoid、Arcaea、Lanota 还有皇室战争…… Music：多着呢…… 就列举几个吧： 《Flower Dance》 《Luv Letter》 《Bad Apple!!》 《チルノのパーフェクトさんすう教室》 《Bloom of Youth》 《雲流れ》 《U.N.オーエンは彼女なのか?》 《不思議の国のアリス》 《輝く針の小人族 ～ Little Princess》 《Intro》 其他详见歌单 进度登记：第一周（2.10~2.16）： 第二周（2.17~2.23）： 第三周（2.24~3.1）： 第四周（3.2~3.8）： 第五周（3.9~3.15）： 第六周（3.16~3.22）： 补充：UPD:2020-02-24广东解除了一级响应，降至二级（看来快开学了） UPD:2020-02-25广东省教育厅发文3月2日起进行在线教育，不得返校，返校时间另定 UPD:2020-02-26学校允许学生申请回校拿资料，由班级学生代表和班主任将资料从班上带到门卫交给学生 UPD:2020-03-02正式线上开学 UPD:2020-03-22国外确诊超25w]]></content>
       <tags>
         <tag>学习</tag>
         <tag>高中</tag>
