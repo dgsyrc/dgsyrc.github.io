@@ -2,8 +2,17 @@
 <search>
   <entry>
     <title><![CDATA[洛谷题解 CF23B 【Party】]]></title>
+    <url>%2F2020%2F03%2F25%2F%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3%20UVA11039%20%E3%80%90Building%20designing%E3%80%91%2F</url>
+    <content type="text"><![CDATA[题意简述：给你一个长度n的序列，选出一个子序列排列出一正一负交替并且绝对值递增使得子序列长度最长，求它的长度。 思路：首先题目数据量不大，完全可以用扫描的方法$O(n)$过。 首先对得到的序列进行排序（当然要用到万恶的$sort$），将其按绝对值大小从小到大排。 随后，选定绝对值最小的数作为开头，并用一个变量$last$记录。 接着从2开始扫到n： 对于每一个数，若$last&lt;0$且当前数大于0，更新$last$为当前数并将子序列长度+1； 若$last&gt;0$且当前数小于0，更新$last$为当前数并将子序列长度+1； 以上步骤相当于做了一个一正一负逐个选择的过程。 代码实现：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849#include&lt;iostream&gt;#include&lt;cstdio&gt;#include&lt;algorithm&gt;using namespace std;int T,n,list[500010],last,ans;inline int c_abs(int k)&#123; return (k&gt;0)?k:-k;&#125;bool cmp(int x,int y)&#123; return c_abs(x)&lt;c_abs(y);&#125;int main()&#123; scanf("%d",&amp;T); while(T--) &#123; scanf("%d",&amp;n); for(int a=1;a&lt;=n;++a) &#123; scanf("%d",&amp;list[a]); &#125; sort(list+1,list+n+1,cmp); last=list[1]; ans=1; for(int a=2;a&lt;=n;a++) &#123; if(last&lt;0&amp;&amp;list[a]&gt;0) &#123; last=list[a]; ans++; continue; &#125; if(last&gt;0&amp;&amp;list[a]&lt;0) &#123; last=list[a]; ans++; continue; &#125; &#125; printf("%d\n",ans); &#125; return 0;&#125; 题目详见:https://www.luogu.com.cn/problem/UVA11039]]></content>
+      <tags>
+        <tag>题解</tag>
+        <tag>洛谷</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[洛谷题解 CF23B 【Party】]]></title>
     <url>%2F2020%2F03%2F25%2F%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3%20CF23B%20%E3%80%90Party%E3%80%91%2F</url>
-    <content type="text"><![CDATA[解题思路：首先这一看就是数学题【应该让雾之湖的Cirno来做(这题明显就很⑨$^*$)】。 *:⑨就是baka的意思。 其次，题目要求你在这$n$个人中找到一种关系图使得剩下的人最多，输出剩下的人数。 题目所说的朋友个数是指在场的，走了的就要减去。 关系是相互的。 （题目翻译有点误导人，没说明白） 当然要先画图模拟找规律啦！ 规律：一个人：一个人就不画图了，明摆着当扫到0个朋友的人离开时他就要走。 两个人：同上，图可以脑补，因为只存在两种关系（要么两个人是朋友，要么不是）。 同样，没有人可以剩下。 三个人：咯，你们要的图： 如图所设的关系： 当0个朋友的人要走时，没有人要走； 当1个朋友的人要走时，2、3要走； 当2个朋友的人要走时，没有人要走；（此时1的朋友个数为0，巧妙地绕过了扫描） 这样我们就剩下了1个人。 四个人： 如图所设的关系： 当0个朋友的人要走时，没有人要走； 当1个朋友的人要走时，没有人要走； 当2个朋友的人要走时，1、3要走； 当3个朋友的人要走时，没有人要走；（此时2和4的朋友个数为1，巧妙地绕过了扫描） 这样我们就剩下了2个人。 n个人：（4人以后的情况就不画了，占的版面太多） 根据上述方法继续推，不难发现剩下的人数总是$n-2$。 所以我们就有以下关系（设答案为$ans$）： $$ ans= \begin{cases} 0, &amp; 0 \leq n &lt; 2 \ n-2, &amp; n \geq 2 \end{cases} $$ 所以我们就有如下代码： 12345678910111213141516#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;int T,n;int main()&#123; scanf("%d",&amp;T); while(T--) &#123; scanf("%d",&amp;n); (n&lt;2)?printf("0\n"):printf("%d\n",n-2);//这里就不用解释了吧 &#125; return 0;&#125; 有帮助留个赞，顶上去才能让更多人看到哦！ 题目详见:https://www.luogu.com.cn/problem/CF23B]]></content>
+    <content type="text"><![CDATA[解题思路：首先这一看就是数学题【应该让雾之湖的Cirno来做(这题明显就很⑨$^*$)】。 *:⑨就是baka的意思。 其次，题目要求你在这$n$个人中找到一种关系图使得剩下的人最多，输出剩下的人数。 题目所说的朋友个数是指在场的，走了的就要减去。 关系是相互的。 （题目翻译有点误导人，没说明白） 当然要先画图模拟找规律啦！ 规律：一个人：一个人就不画图了，明摆着当扫到0个朋友的人离开时他就要走。 两个人：同上，图可以脑补，因为只存在两种关系（要么两个人是朋友，要么不是）。 同样，没有人可以剩下。 三个人：咯，你们要的图： 如图所设的关系： 当0个朋友的人要走时，没有人要走； 当1个朋友的人要走时，2、3要走； 当2个朋友的人要走时，没有人要走；（此时1的朋友个数为0，巧妙地绕过了扫描） 这样我们就剩下了1个人。 四个人： 如图所设的关系： 当0个朋友的人要走时，没有人要走； 当1个朋友的人要走时，没有人要走； 当2个朋友的人要走时，1、3要走； 当3个朋友的人要走时，没有人要走；（此时2和4的朋友个数为1，巧妙地绕过了扫描） 这样我们就剩下了2个人。 n个人：（4人以后的情况就不画了，占的版面太多） 根据上述方法继续推，不难发现剩下的人数总是$n-2$。 所以我们就有以下关系（设答案为$ans$）： $$ ans= \begin{cases} 0, &amp; 0 \leq n &lt; 2 \ n-2, &amp; n \geq 2 \end{cases} $$ 所以我们就有如下代码： 12345678910111213141516#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;int T,n;int main()&#123; scanf("%d",&amp;T); while(T--) &#123; scanf("%d",&amp;n); (n&lt;2)?printf("0\n"):printf("%d\n",n-2);//这里就不用解释了吧 &#125; return 0;&#125; 题目详见:https://www.luogu.com.cn/problem/CF23B]]></content>
       <tags>
         <tag>题解</tag>
         <tag>洛谷</tag>
@@ -279,8 +288,8 @@
     <url>%2F2019%2F01%2F17%2F%E6%B4%9B%E8%B0%B7%E7%AE%A1%E7%90%86%E8%AF%AD%E5%BD%95%EF%BC%881%EF%BC%89%2F</url>
     <content type="text"><![CDATA[]]></content>
       <tags>
-        <tag>图片</tag>
         <tag>洛谷</tag>
+        <tag>图片</tag>
       </tags>
   </entry>
   <entry>

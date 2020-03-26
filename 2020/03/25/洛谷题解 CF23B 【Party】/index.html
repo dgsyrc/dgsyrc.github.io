@@ -110,7 +110,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://dgsyrc.github.io/2020/03/25/洛谷题解%20CF23B%20【Party】/3.png">
 <meta property="og:image" content="https://dgsyrc.github.io/2020/03/25/洛谷题解%20CF23B%20【Party】/4.png">
-<meta property="og:updated_time" content="2020-03-25T13:10:22.231Z">
+<meta property="og:updated_time" content="2020-03-26T14:21:27.468Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="洛谷题解 CF23B 【Party】">
 <meta name="twitter:description" content="解题思路：首先这一看就是数学题【应该让雾之湖的Cirno来做(这题明显就很⑨$^*$)】。 *:⑨就是baka的意思。 其次，题目要求你在这$n$个人中找到一种关系图使得剩下的人最多，输出剩下的人数。 题目所说的朋友个数是指在场的，走了的就要减去。 关系是相互的。 （题目翻译有点误导人，没说明白） 当然要先画图模拟找规律啦！ 规律：一个人：一个人就不画图了，明摆着当扫到0个朋友的人离开时他就要走。">
@@ -440,12 +440,24 @@
                 
               
 
-              <time title="创建时间：2020-03-25 21:10:28 / 修改时间：21:10:22" itemprop="dateCreated datePublished" datetime="2020-03-25T21:10:28+08:00">2020-03-25</time>
+              <time title="创建时间：2020-03-25 21:10:28" itemprop="dateCreated datePublished" datetime="2020-03-25T21:10:28+08:00">2020-03-25</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-03-26 22:21:27" itemprop="dateModified" datetime="2020-03-26T22:21:27+08:00">2020-03-26</time>
               
             
           </span>
@@ -479,7 +491,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">975</span>
+                <span title="本文字数">954</span>
               
 
               
@@ -544,7 +556,6 @@
 <p>所以我们就有如下代码：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> T,n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">	<span class="keyword">while</span>(T--)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">		(n&lt;<span class="number">2</span>)?<span class="built_in">printf</span>(<span class="string">"0\n"</span>):<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,n<span class="number">-2</span>);<span class="comment">//这里就不用解释了吧</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>有帮助留个赞，顶上去才能让更多人看到哦！</p>
 <hr>
 <p>题目详见:<a href="https://www.luogu.com.cn/problem/CF23B" target="_blank" rel="noopener">https://www.luogu.com.cn/problem/CF23B</a></p>
 
@@ -614,6 +625,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/03/25/洛谷题解 UVA11039 【Building designing】/" rel="prev" title="洛谷题解 CF23B 【Party】">
+                洛谷题解 CF23B 【Party】 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -685,7 +700,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">42</span>
+                    <span class="site-state-item-count">43</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -927,7 +942,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">57k</span>
+    <span title="站点总字数">58k</span>
   
 
   
@@ -936,7 +951,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">52 分钟</span>
+    <span title="站点阅读时长">53 分钟</span>
   
 </div>
 
