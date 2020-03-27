@@ -100,18 +100,18 @@
 
 
 
-  <meta name="description" content="题意简述：给你一个长度n的序列，选出一个子序列排列出一正一负交替并且绝对值递增使得子序列长度最长，求它的长度。 思路：首先题目数据量不大，完全可以用扫描的方法$O(n)$过。 首先对得到的序列进行排序（当然要用到万恶的$sort$），将其按绝对值大小从小到大排。 随后，选定绝对值最小的数作为开头，并用一个变量$last$记录。 接着从2开始扫到n： 对于每一个数，若$last&amp;lt;0$且当前数大">
-<meta name="keywords" content="题解,洛谷">
+  <meta name="description" content="题意简述：给你一个长度n的序列，选出一个子序列排列出一正一负交替并且绝对值递增使得子序列长度最长，求它的长度。 思路：首先题目数据量不大，完全可以用扫描的方法过。 首先对得到的序列进行排序（当然要用到万恶的$sort$），将其按绝对值大小从小到大排。 随后，选定绝对值最小的数作为开头，并用一个变量$last$记录。 接着从2开始扫到n： 对于每一个数，若$last&amp;lt;0$且当前数大于0，更新$">
+<meta name="keywords" content="洛谷,题解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="洛谷题解 UVA11039 【Building designing】">
 <meta property="og:url" content="https://dgsyrc.github.io/2020/03/26/洛谷题解 UVA11039 【Building designing】/index.html">
 <meta property="og:site_name" content="YRC的博客">
-<meta property="og:description" content="题意简述：给你一个长度n的序列，选出一个子序列排列出一正一负交替并且绝对值递增使得子序列长度最长，求它的长度。 思路：首先题目数据量不大，完全可以用扫描的方法$O(n)$过。 首先对得到的序列进行排序（当然要用到万恶的$sort$），将其按绝对值大小从小到大排。 随后，选定绝对值最小的数作为开头，并用一个变量$last$记录。 接着从2开始扫到n： 对于每一个数，若$last&amp;lt;0$且当前数大">
+<meta property="og:description" content="题意简述：给你一个长度n的序列，选出一个子序列排列出一正一负交替并且绝对值递增使得子序列长度最长，求它的长度。 思路：首先题目数据量不大，完全可以用扫描的方法过。 首先对得到的序列进行排序（当然要用到万恶的$sort$），将其按绝对值大小从小到大排。 随后，选定绝对值最小的数作为开头，并用一个变量$last$记录。 接着从2开始扫到n： 对于每一个数，若$last&amp;lt;0$且当前数大于0，更新$">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-26T15:15:32.041Z">
+<meta property="og:updated_time" content="2020-03-27T00:00:04.262Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="洛谷题解 UVA11039 【Building designing】">
-<meta name="twitter:description" content="题意简述：给你一个长度n的序列，选出一个子序列排列出一正一负交替并且绝对值递增使得子序列长度最长，求它的长度。 思路：首先题目数据量不大，完全可以用扫描的方法$O(n)$过。 首先对得到的序列进行排序（当然要用到万恶的$sort$），将其按绝对值大小从小到大排。 随后，选定绝对值最小的数作为开头，并用一个变量$last$记录。 接着从2开始扫到n： 对于每一个数，若$last&amp;lt;0$且当前数大">
+<meta name="twitter:description" content="题意简述：给你一个长度n的序列，选出一个子序列排列出一正一负交替并且绝对值递增使得子序列长度最长，求它的长度。 思路：首先题目数据量不大，完全可以用扫描的方法过。 首先对得到的序列进行排序（当然要用到万恶的$sort$），将其按绝对值大小从小到大排。 随后，选定绝对值最小的数作为开头，并用一个变量$last$记录。 接着从2开始扫到n： 对于每一个数，若$last&amp;lt;0$且当前数大于0，更新$">
 
 
 
@@ -437,12 +437,24 @@
                 
               
 
-              <time title="创建时间：2020-03-26 22:10:28 / 修改时间：23:15:32" itemprop="dateCreated datePublished" datetime="2020-03-26T22:10:28+08:00">2020-03-26</time>
+              <time title="创建时间：2020-03-26 22:10:28" itemprop="dateCreated datePublished" datetime="2020-03-26T22:10:28+08:00">2020-03-26</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-03-27 08:00:04" itemprop="dateModified" datetime="2020-03-27T08:00:04+08:00">2020-03-27</time>
               
             
           </span>
@@ -511,13 +523,14 @@
 
       
         <h4 id="题意简述："><a href="#题意简述：" class="headerlink" title="题意简述："></a>题意简述：</h4><p>给你一个长度n的序列，选出一个子序列排列出一正一负交替并且绝对值递增使得子序列长度最长，求它的长度。</p>
-<h4 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h4><p>首先题目数据量不大，完全可以用扫描的方法$O(n)$过。</p>
+<h4 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h4><p>首先题目数据量不大，完全可以用扫描的方法过。</p>
 <p>首先对得到的序列进行排序（当然要用到万恶的$sort$），将其按绝对值大小从小到大排。</p>
 <p>随后，选定绝对值最小的数作为开头，并用一个变量$last$记录。</p>
 <p>接着从2开始扫到n：</p>
 <p>对于每一个数，若$last&lt;0$且当前数大于0，更新$last$为当前数并将子序列长度+1；</p>
 <p>若$last&gt;0$且当前数小于0，更新$last$为当前数并将子序列长度+1；</p>
 <p>以上步骤相当于做了一个一正一负逐个选择的过程。</p>
+<p>时间复杂度$O(n \ log\ n)$。</p>
 <h4 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> T,n,<span class="built_in">list</span>[<span class="number">500010</span>],last,ans;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">c_abs</span><span class="params">(<span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (k&gt;<span class="number">0</span>)?k:-k;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> c_abs(x)&lt;c_abs(y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">	<span class="keyword">while</span>(T--)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> a=<span class="number">1</span>;a&lt;=n;++a)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;<span class="built_in">list</span>[a]);</span><br><span class="line">		&#125;</span><br><span class="line">		sort(<span class="built_in">list</span>+<span class="number">1</span>,<span class="built_in">list</span>+n+<span class="number">1</span>,cmp);</span><br><span class="line">		last=<span class="built_in">list</span>[<span class="number">1</span>];</span><br><span class="line">		ans=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> a=<span class="number">2</span>;a&lt;=n;a++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(last&lt;<span class="number">0</span>&amp;&amp;<span class="built_in">list</span>[a]&gt;<span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				last=<span class="built_in">list</span>[a];</span><br><span class="line">				ans++;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(last&gt;<span class="number">0</span>&amp;&amp;<span class="built_in">list</span>[a]&lt;<span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				last=<span class="built_in">list</span>[a];</span><br><span class="line">				ans++;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <hr>
@@ -545,9 +558,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/题解/" rel="tag"># 题解</a>
-          
             <a href="/tags/洛谷/" rel="tag"># 洛谷</a>
+          
+            <a href="/tags/题解/" rel="tag"># 题解</a>
           
         </div>
       
