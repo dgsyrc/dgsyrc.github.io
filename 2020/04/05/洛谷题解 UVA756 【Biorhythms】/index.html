@@ -100,27 +100,25 @@
 
 
 
-  <meta name="description" content="主要思想 bfs运用队列queue减少代码量（坐标数组）简单点来说就是先从马的位置开始搜索，搜索马可以到达的点： 蓝色点即为马可以到达的点（马走日），红色为马所在位置：  上代码： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647#include&amp;lt;iostream&amp;gt;">
+  <meta name="description" content="题目大意一个人体力、情感、智力出现峰值的周期分别为23、28、33天，现在给出三者上一次出现峰值的日期$p,e,i$和现在的日期$d$，问经过几天三个峰值会出现在同一天。 思路首先这一看就是中国剩余定理的模板题， 如果不知道中国剩余定理建议先学习再做本题，这样就会发现这题是非常简单的。 由题意和中国剩余定理可得以下方程组： $$  \begin{cases} x≡p(mod\ 23)  \   (">
 <meta name="keywords" content="洛谷,题解">
 <meta property="og:type" content="article">
-<meta property="og:title" content="洛谷题解 P1443 【马的遍历】">
-<meta property="og:url" content="https://dgsyrc.github.io/2019/05/13/洛谷题解 P1443 【马的遍历】/index.html">
+<meta property="og:title" content="洛谷题解 UVA756 【Biorhythms】">
+<meta property="og:url" content="https://dgsyrc.github.io/2020/04/05/洛谷题解 UVA756 【Biorhythms】/index.html">
 <meta property="og:site_name" content="YRC的博客">
-<meta property="og:description" content="主要思想 bfs运用队列queue减少代码量（坐标数组）简单点来说就是先从马的位置开始搜索，搜索马可以到达的点： 蓝色点即为马可以到达的点（马走日），红色为马所在位置：  上代码： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647#include&amp;lt;iostream&amp;gt;">
+<meta property="og:description" content="题目大意一个人体力、情感、智力出现峰值的周期分别为23、28、33天，现在给出三者上一次出现峰值的日期$p,e,i$和现在的日期$d$，问经过几天三个峰值会出现在同一天。 思路首先这一看就是中国剩余定理的模板题， 如果不知道中国剩余定理建议先学习再做本题，这样就会发现这题是非常简单的。 由题意和中国剩余定理可得以下方程组： $$  \begin{cases} x≡p(mod\ 23)  \   (">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://dgsyrc.github.io/2019/05/13/洛谷题解%20P1443%20【马的遍历】/P1443.jpg">
-<meta property="og:updated_time" content="2020-03-26T15:15:42.006Z">
+<meta property="og:updated_time" content="2020-04-05T10:44:54.348Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="洛谷题解 P1443 【马的遍历】">
-<meta name="twitter:description" content="主要思想 bfs运用队列queue减少代码量（坐标数组）简单点来说就是先从马的位置开始搜索，搜索马可以到达的点： 蓝色点即为马可以到达的点（马走日），红色为马所在位置：  上代码： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647#include&amp;lt;iostream&amp;gt;">
-<meta name="twitter:image" content="https://dgsyrc.github.io/2019/05/13/洛谷题解%20P1443%20【马的遍历】/P1443.jpg">
+<meta name="twitter:title" content="洛谷题解 UVA756 【Biorhythms】">
+<meta name="twitter:description" content="题目大意一个人体力、情感、智力出现峰值的周期分别为23、28、33天，现在给出三者上一次出现峰值的日期$p,e,i$和现在的日期$d$，问经过几天三个峰值会出现在同一天。 思路首先这一看就是中国剩余定理的模板题， 如果不知道中国剩余定理建议先学习再做本题，这样就会发现这题是非常简单的。 由题意和中国剩余定理可得以下方程组： $$  \begin{cases} x≡p(mod\ 23)  \   (">
 
 
 
 
 
 
-  <link rel="canonical" href="https://dgsyrc.github.io/2019/05/13/洛谷题解 P1443 【马的遍历】/">
+  <link rel="canonical" href="https://dgsyrc.github.io/2020/04/05/洛谷题解 UVA756 【Biorhythms】/">
 
 
 
@@ -130,7 +128,7 @@
   };
 </script>
 
-  <title>洛谷题解 P1443 【马的遍历】 | YRC的博客</title>
+  <title>洛谷题解 UVA756 【Biorhythms】 | YRC的博客</title>
   
 
 
@@ -396,7 +394,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dgsyrc.github.io/2019/05/13/洛谷题解 P1443 【马的遍历】/">
+    <link itemprop="mainEntityOfPage" href="https://dgsyrc.github.io/2020/04/05/洛谷题解 UVA756 【Biorhythms】/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YRC">
@@ -413,7 +411,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">洛谷题解 P1443 【马的遍历】
+          <h1 class="post-title" itemprop="name headline">洛谷题解 UVA756 【Biorhythms】
 
               
             
@@ -439,24 +437,12 @@
                 
               
 
-              <time title="创建时间：2019-05-13 18:22:04" itemprop="dateCreated datePublished" datetime="2019-05-13T18:22:04+08:00">2019-05-13</time>
+              <time title="创建时间：2020-04-05 18:40:28 / 修改时间：18:44:54" itemprop="dateCreated datePublished" datetime="2020-04-05T18:40:28+08:00">2020-04-05</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-03-26 23:15:42" itemprop="dateModified" datetime="2020-03-26T23:15:42+08:00">2020-03-26</time>
               
             
           </span>
@@ -524,13 +510,32 @@
       
 
       
-        <h2 id="主要思想-bfs"><a href="#主要思想-bfs" class="headerlink" title="主要思想 bfs"></a>主要思想 bfs</h2><h2 id="运用队列queue"><a href="#运用队列queue" class="headerlink" title="运用队列queue"></a>运用队列queue</h2><h3 id="减少代码量（坐标数组）"><a href="#减少代码量（坐标数组）" class="headerlink" title="减少代码量（坐标数组）"></a>减少代码量（坐标数组）</h3><p>简单点来说就是先从马的位置开始搜索，搜索马可以到达的点：</p>
-<p>蓝色点即为马可以到达的点（马走日），红色为马所在位置：</p>
-<p><img src="P1443.jpg" alt></p>
-<p>上代码：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> node[<span class="number">9</span>][<span class="number">2</span>]=&#123;&#123;<span class="number">0</span>,<span class="number">0</span>&#125;,&#123;<span class="number">-2</span>,<span class="number">1</span>&#125;,&#123;<span class="number">1</span>,<span class="number">-2</span>&#125;,&#123;<span class="number">2</span>,<span class="number">-1</span>&#125;,&#123;<span class="number">-1</span>,<span class="number">2</span>&#125;,&#123;<span class="number">2</span>,<span class="number">1</span>&#125;,&#123;<span class="number">-2</span>,<span class="number">-1</span>&#125;,&#123;<span class="number">1</span>,<span class="number">2</span>&#125;,&#123;<span class="number">-1</span>,<span class="number">-2</span>&#125;&#125;;<span class="comment">//坐标数组，节省代码量</span></span><br><span class="line"><span class="keyword">int</span> n,m,xs,ys,<span class="built_in">map</span>[<span class="number">401</span>][<span class="number">401</span>];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">zb</span>//结构体</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> x,y,bu;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">queue</span>&lt;zb&gt; Q;<span class="comment">//队列</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m&gt;&gt;xs&gt;&gt;ys;<span class="comment">//输入</span></span><br><span class="line">	<span class="built_in">memset</span>(<span class="built_in">map</span>,<span class="number">10000</span>,<span class="keyword">sizeof</span>(<span class="built_in">map</span>));<span class="comment">//初始化，便于后面的搜索比较和输出</span></span><br><span class="line">	<span class="built_in">map</span>[xs][ys]=<span class="number">0</span>;<span class="comment">//一定要是0（马所在点步数为0）</span></span><br><span class="line">	Q.push((zb)&#123;xs,ys,<span class="number">0</span>&#125;);<span class="comment">//进队</span></span><br><span class="line">	<span class="keyword">while</span>(!Q.empty())</span><br><span class="line">	&#123;</span><br><span class="line">		zb news=Q.front();</span><br><span class="line">		Q.pop();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> a=<span class="number">1</span>;a&lt;=<span class="number">8</span>;a++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(news.y+node[a][<span class="number">1</span>]&gt;<span class="number">0</span>&amp;&amp;news.y+node[a][<span class="number">1</span>]&lt;=m&amp;&amp;news.x+node[a][<span class="number">0</span>]&gt;<span class="number">0</span>&amp;&amp;news.x+node[a][<span class="number">0</span>]&lt;=n&amp;&amp;<span class="built_in">map</span>[news.x+node[a][<span class="number">0</span>]][news.y+node[a][<span class="number">1</span>]]&gt;news.bu+<span class="number">1</span>)<span class="comment">//又长又臭的if语句，比较步数，判断是否越界</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">map</span>[news.x+node[a][<span class="number">0</span>]][news.y+node[a][<span class="number">1</span>]]=news.bu+<span class="number">1</span>;<span class="comment">//更新</span></span><br><span class="line">				Q.push((zb)&#123;news.x+node[a][<span class="number">0</span>],news.y+node[a][<span class="number">1</span>],news.bu+<span class="number">1</span>&#125;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> a=<span class="number">1</span>;a&lt;=n;a++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> b=<span class="number">1</span>;b&lt;=m;b++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(<span class="built_in">map</span>[a][b]&gt;=<span class="number">10000</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%-5d"</span>,<span class="number">-1</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%-5d"</span>,<span class="built_in">map</span>[a][b]);	</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>一个人体力、情感、智力出现峰值的周期分别为23、28、33天，现在给出三者上一次出现峰值的日期$p,e,i$和现在的日期$d$，问经过几天三个峰值会出现在同一天。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>首先这一看就是中国剩余定理的模板题，</p>
+<p>如果不知道中国剩余定理建议先学习再做本题，这样就会发现这题是非常简单的。</p>
+<p>由题意和中国剩余定理可得以下方程组：</p>
+<p>$$  \begin{cases} x≡p(mod\ 23)  \   (1) \\ x≡e(mod\ 28)  \   (2)\\ x≡i(mod\ 33)  \   (3)\end{cases} $$</p>
+<p>其中，该方程组可以化为以下形式：</p>
+<p>$$(1)  \begin{cases} x_1≡1(mod\ 23) \\ x_1≡0(mod\ 28) \\ x_1≡0(mod\ 33) \end{cases} $$</p>
+<p>$$(2)  \begin{cases} x_2≡0(mod\ 23) \\ x_2≡1(mod\ 28) \\ x_2≡0(mod\ 33) \end{cases} $$</p>
+<p>$$(3)  \begin{cases} x_3≡0(mod\ 23) \\ x_3≡0(mod\ 28) \\ x_3≡1(mod\ 33) \end{cases} $$</p>
+<p>解以上方程组，有：</p>
+<p>$$ \begin{cases} x_1=5544 \\ x_2=14421 \\ x_3=1288 \end{cases} $$</p>
+<p>由中国剩余定理有：</p>
+<p>$ lcm(23,28,33)=21252 $</p>
+<p>$ ans+d≡p * x_1+e * x_2+i * x_3(mod \ 21252) $</p>
+<p>化简得：</p>
+<p>$ ans=(p * x_1+e * x_2+i * x_3-d+21252)\ mod\ 21252 $</p>
+<p>即：</p>
+<p>$ ans=(p * 5544+e * 14421+i * 1288-d+21252)\ mod\ 21252 $</p>
+<p>这样我们就得到了本题的通解。</p>
+<p>但是有个特殊情况，当$ans=0$时要输出$21252$，因为你要求的是下一次三者同一天。</p>
+<p>Q：为什么通解中要$+21252$</p>
+<p>A：因为题目中不能保证$d$一定小于$p$、$e$、$i$，所以为了避免$ans$变成负数，所以要先$+21252$再取模</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">21252</span>;<span class="comment">//lcm(23,28,33)</span></span><br><span class="line"><span class="keyword">int</span> p,e,i,d,cot;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;p,&amp;e,&amp;i,&amp;d);</span><br><span class="line">	<span class="keyword">while</span>(p+e+i+d!=<span class="number">-4</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		cot++;</span><br><span class="line">		<span class="keyword">int</span> ans=(<span class="number">5544</span>*p+<span class="number">14421</span>*e+<span class="number">1288</span>*i-d+maxn)%maxn;<span class="comment">//通解</span></span><br><span class="line">		<span class="keyword">if</span>(ans==<span class="number">0</span>)<span class="comment">//特判</span></span><br><span class="line">		&#123;</span><br><span class="line">			ans=maxn;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Case %d: the next triple peak occurs in %d days.\n"</span>,cot,ans);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;p,&amp;e,&amp;i,&amp;d);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="就这么简单，预祝明日特长生考试通过！"><a href="#就这么简单，预祝明日特长生考试通过！" class="headerlink" title="就这么简单，预祝明日特长生考试通过！"></a>就这么简单，预祝明日特长生考试通过！</h2><p>题目详见:<a href="https://www.luogu.org/problemnew/show/P1443" target="_blank" rel="noopener">https://www.luogu.org/problemnew/show/P1443</a></p>
+<hr>
+<p>题目详见:<a href="https://www.luogu.com.cn/problem/UVA756" target="_blank" rel="noopener">https://www.luogu.com.cn/problem/UVA756</a></p>
 
       
     </div>
@@ -589,8 +594,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/13/我的Minecraft生存系列（2）/" rel="next" title="我的Minecraft生存系列（2）">
-                <i class="fa fa-chevron-left"></i> 我的Minecraft生存系列（2）
+              <a href="/2020/03/26/洛谷题解 UVA11039 【Building designing】/" rel="next" title="洛谷题解 UVA11039 【Building designing】">
+                <i class="fa fa-chevron-left"></i> 洛谷题解 UVA11039 【Building designing】
               </a>
             
           </div>
@@ -598,10 +603,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/18/2019中考备考记/" rel="prev" title="2019中考备考记">
-                2019中考备考记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -876,7 +877,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#主要思想-bfs"><span class="nav-number">1.</span> <span class="nav-text">主要思想 bfs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运用队列queue"><span class="nav-number">2.</span> <span class="nav-text">运用队列queue</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#减少代码量（坐标数组）"><span class="nav-number">2.1.</span> <span class="nav-text">减少代码量（坐标数组）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#就这么简单，预祝明日特长生考试通过！"><span class="nav-number">3.</span> <span class="nav-text">就这么简单，预祝明日特长生考试通过！</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意"><span class="nav-number">1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现"><span class="nav-number">3.</span> <span class="nav-text">代码实现</span></a></li></ol></div>
             
 
           </div>

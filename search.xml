@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[洛谷题解 UVA756 【Biorhythms】]]></title>
+    <url>%2F2020%2F04%2F05%2F%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3%20UVA756%20%E3%80%90Biorhythms%E3%80%91%2F</url>
+    <content type="text"><![CDATA[题目大意一个人体力、情感、智力出现峰值的周期分别为23、28、33天，现在给出三者上一次出现峰值的日期$p,e,i$和现在的日期$d$，问经过几天三个峰值会出现在同一天。 思路首先这一看就是中国剩余定理的模板题， 如果不知道中国剩余定理建议先学习再做本题，这样就会发现这题是非常简单的。 由题意和中国剩余定理可得以下方程组： $$ \begin{cases} x≡p(mod\ 23) \ (1) \\ x≡e(mod\ 28) \ (2)\\ x≡i(mod\ 33) \ (3)\end{cases} $$ 其中，该方程组可以化为以下形式： $$(1) \begin{cases} x_1≡1(mod\ 23) \\ x_1≡0(mod\ 28) \\ x_1≡0(mod\ 33) \end{cases} $$ $$(2) \begin{cases} x_2≡0(mod\ 23) \\ x_2≡1(mod\ 28) \\ x_2≡0(mod\ 33) \end{cases} $$ $$(3) \begin{cases} x_3≡0(mod\ 23) \\ x_3≡0(mod\ 28) \\ x_3≡1(mod\ 33) \end{cases} $$ 解以上方程组，有： $$ \begin{cases} x_1=5544 \\ x_2=14421 \\ x_3=1288 \end{cases} $$ 由中国剩余定理有： $ lcm(23,28,33)=21252 $ $ ans+d≡p * x_1+e * x_2+i * x_3(mod \ 21252) $ 化简得： $ ans=(p * x_1+e * x_2+i * x_3-d+21252)\ mod\ 21252 $ 即： $ ans=(p * 5544+e * 14421+i * 1288-d+21252)\ mod\ 21252 $ 这样我们就得到了本题的通解。 但是有个特殊情况，当$ans=0$时要输出$21252$，因为你要求的是下一次三者同一天。 Q：为什么通解中要$+21252$ A：因为题目中不能保证$d$一定小于$p$、$e$、$i$，所以为了避免$ans$变成负数，所以要先$+21252$再取模 代码实现12345678910111213141516171819202122#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;const int maxn=21252;//lcm(23,28,33)int p,e,i,d,cot;int main()&#123; scanf("%d%d%d%d",&amp;p,&amp;e,&amp;i,&amp;d); while(p+e+i+d!=-4) &#123; cot++; int ans=(5544*p+14421*e+1288*i-d+maxn)%maxn;//通解 if(ans==0)//特判 &#123; ans=maxn; &#125; printf("Case %d: the next triple peak occurs in %d days.\n",cot,ans); scanf("%d%d%d%d",&amp;p,&amp;e,&amp;i,&amp;d); &#125; return 0;&#125; 题目详见:https://www.luogu.com.cn/problem/UVA756]]></content>
+      <tags>
+        <tag>洛谷</tag>
+        <tag>题解</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[洛谷题解 UVA11039 【Building designing】]]></title>
     <url>%2F2020%2F03%2F26%2F%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3%20UVA11039%20%E3%80%90Building%20designing%E3%80%91%2F</url>
     <content type="text"><![CDATA[题意简述：给你一个长度n的序列，选出一个子序列排列出一正一负交替并且绝对值递增使得子序列长度最长，求它的长度。 思路：首先题目数据量不大，完全可以用扫描的方法过。 首先对得到的序列进行排序（当然要用到万恶的$sort$），将其按绝对值大小从小到大排。 随后，选定绝对值最小的数作为开头，并用一个变量$last$记录。 接着从2开始扫到n： 对于每一个数，若$last&lt;0$且当前数大于0，更新$last$为当前数并将子序列长度+1； 若$last&gt;0$且当前数小于0，更新$last$为当前数并将子序列长度+1； 以上步骤相当于做了一个一正一负逐个选择的过程。 时间复杂度$O(n \ log\ n)$。 代码实现：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849#include&lt;iostream&gt;#include&lt;cstdio&gt;#include&lt;algorithm&gt;using namespace std;int T,n,list[500010],last,ans;inline int c_abs(int k)&#123; return (k&gt;0)?k:-k;&#125;bool cmp(int x,int y)&#123; return c_abs(x)&lt;c_abs(y);&#125;int main()&#123; scanf("%d",&amp;T); while(T--) &#123; scanf("%d",&amp;n); for(int a=1;a&lt;=n;++a) &#123; scanf("%d",&amp;list[a]); &#125; sort(list+1,list+n+1,cmp); last=list[1]; ans=1; for(int a=2;a&lt;=n;a++) &#123; if(last&lt;0&amp;&amp;list[a]&gt;0) &#123; last=list[a]; ans++; continue; &#125; if(last&gt;0&amp;&amp;list[a]&lt;0) &#123; last=list[a]; ans++; continue; &#125; &#125; printf("%d\n",ans); &#125; return 0;&#125; 题目详见:https://www.luogu.com.cn/problem/UVA11039]]></content>
@@ -288,8 +297,8 @@
     <url>%2F2019%2F01%2F17%2F%E6%B4%9B%E8%B0%B7%E7%AE%A1%E7%90%86%E8%AF%AD%E5%BD%95%EF%BC%881%EF%BC%89%2F</url>
     <content type="text"><![CDATA[]]></content>
       <tags>
-        <tag>洛谷</tag>
         <tag>图片</tag>
+        <tag>洛谷</tag>
       </tags>
   </entry>
   <entry>
