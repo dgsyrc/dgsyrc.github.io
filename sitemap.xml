@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dgsyrc.github.io/homework/index.html</loc>
+    
+    <lastmod>2020-04-16T07:11:19.914Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://dgsyrc.github.io/homework/0416.html</loc>
+    
+    <lastmod>2020-04-16T07:04:19.989Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://dgsyrc.github.io/homework/0323.html</loc>
     
     <lastmod>2020-04-15T09:25:30.974Z</lastmod>
@@ -117,13 +131,6 @@
     <loc>https://dgsyrc.github.io/homework/0415.html</loc>
     
     <lastmod>2020-04-15T09:20:46.488Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://dgsyrc.github.io/homework/index.html</loc>
-    
-    <lastmod>2020-04-15T07:50:26.174Z</lastmod>
     
   </url>
   
@@ -639,14 +646,14 @@
   </url>
   
   <url>
-    <loc>https://dgsyrc.github.io/lib/bookmark/package.json</loc>
+    <loc>https://dgsyrc.github.io/lib/bookmark/README.html</loc>
     
     <lastmod>2019-01-06T05:59:48.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dgsyrc.github.io/lib/bookmark/README.html</loc>
+    <loc>https://dgsyrc.github.io/lib/bookmark/package.json</loc>
     
     <lastmod>2019-01-06T05:59:48.000Z</lastmod>
     
