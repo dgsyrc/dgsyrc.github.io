@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dgsyrc.github.io/homework/index.html</loc>
+    
+    <lastmod>2020-04-20T10:49:39.934Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://dgsyrc.github.io/homework/0420.html</loc>
+    
+    <lastmod>2020-04-20T10:49:15.019Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://dgsyrc.github.io/2020/04/19/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3%20UVA10299%20%E3%80%90Relatives%E3%80%91/</loc>
     
     <lastmod>2020-04-19T11:50:52.598Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>https://dgsyrc.github.io/2020/03/22/OI%E6%A8%A1%E6%9D%BF%E9%A2%98%E5%8D%95/</loc>
     
     <lastmod>2020-04-17T10:29:39.767Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://dgsyrc.github.io/homework/index.html</loc>
-    
-    <lastmod>2020-04-17T09:21:36.624Z</lastmod>
     
   </url>
   
@@ -660,14 +667,14 @@
   </url>
   
   <url>
-    <loc>https://dgsyrc.github.io/lib/bookmark/README.html</loc>
+    <loc>https://dgsyrc.github.io/lib/bookmark/package.json</loc>
     
     <lastmod>2019-01-06T05:59:48.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dgsyrc.github.io/lib/bookmark/package.json</loc>
+    <loc>https://dgsyrc.github.io/lib/bookmark/README.html</loc>
     
     <lastmod>2019-01-06T05:59:48.000Z</lastmod>
     
