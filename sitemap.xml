@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dgsyrc.github.io/game/index.html</loc>
+    
+    <lastmod>2020-07-07T07:50:48.572Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://dgsyrc.github.io/OJ/index.html</loc>
     
     <lastmod>2020-05-31T03:53:05.553Z</lastmod>
@@ -530,13 +537,6 @@
     <loc>https://dgsyrc.github.io/old/0.html</loc>
     
     <lastmod>2020-02-08T05:15:31.547Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://dgsyrc.github.io/game/index.html</loc>
-    
-    <lastmod>2020-02-06T13:20:30.046Z</lastmod>
     
   </url>
   
