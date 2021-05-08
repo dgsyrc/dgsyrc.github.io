@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dgsyrc.github.io/2021/05/07/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%BA%94%E5%8D%81%E9%9F%B3%E5%AD%A6%E4%B9%A0%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/</loc>
+    
+    <lastmod>2021-05-08T01:44:26.039Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://dgsyrc.github.io/other/index.html</loc>
     
-    <lastmod>2020-07-28T00:31:25.170Z</lastmod>
+    <lastmod>2020-07-28T12:49:58.283Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://dgsyrc.github.io/game/index.html</loc>
     
-    <lastmod>2020-07-28T00:31:17.149Z</lastmod>
+    <lastmod>2020-07-28T12:49:56.366Z</lastmod>
     
   </url>
   
@@ -765,14 +772,14 @@
   </url>
   
   <url>
-    <loc>https://dgsyrc.github.io/lib/bookmark/README.html</loc>
+    <loc>https://dgsyrc.github.io/lib/bookmark/package.json</loc>
     
     <lastmod>2019-01-06T05:59:48.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dgsyrc.github.io/lib/bookmark/package.json</loc>
+    <loc>https://dgsyrc.github.io/lib/bookmark/README.html</loc>
     
     <lastmod>2019-01-06T05:59:48.000Z</lastmod>
     
