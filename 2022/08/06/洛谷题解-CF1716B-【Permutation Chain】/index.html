@@ -100,25 +100,25 @@
 
 
 
-  <meta name="description" content="很水，直接三目运算符判断，看不懂的自己了解一下三目运算符，附代码： 123456789101112131415#include&amp;lt;iostream&amp;gt;namespace UMR//本人专属命名空间&amp;#123;	int a,b,c,d,n;&amp;#125;using namespace std;using namespace UMR;int main()&amp;#123;	cin&amp;gt;&amp;gt;a&amp;g">
-<meta name="keywords" content="题解,洛谷">
+  <meta name="description" content="题意翻译现在有一个长度为 $n$ 的数组 ${1,2,3,4,…,n}$ ，你每次操作可以交换其中任意两个数字的位置，但是要确保除了第一次交换是有两个数字不在原来的位置上外，后续每次操作之后只能增加一个不在原来位置上的数字（其实对应的就是题目中的 longest permutation chain ） 当所有数字都不在原来的位置时，操作结束 解题过程首先根据题意，显然本题除了每组询问的 $chai">
+<meta name="keywords" content="题解,洛谷,Codeforces">
 <meta property="og:type" content="article">
-<meta property="og:title" content="洛谷题解 AT244 【ハンバーガー(Hamburger)】">
-<meta property="og:url" content="https://dgsyrc.github.io/2018/05/07/洛谷题解-AT244-【ハンバーガー-Hamburger-】/index.html">
+<meta property="og:title" content="洛谷题解 CF1716B 【Permutation Chain】">
+<meta property="og:url" content="https://dgsyrc.github.io/2022/08/06/洛谷题解-CF1716B-【Permutation Chain】/index.html">
 <meta property="og:site_name" content="YRC的博客">
-<meta property="og:description" content="很水，直接三目运算符判断，看不懂的自己了解一下三目运算符，附代码： 123456789101112131415#include&amp;lt;iostream&amp;gt;namespace UMR//本人专属命名空间&amp;#123;	int a,b,c,d,n;&amp;#125;using namespace std;using namespace UMR;int main()&amp;#123;	cin&amp;gt;&amp;gt;a&amp;g">
+<meta property="og:description" content="题意翻译现在有一个长度为 $n$ 的数组 ${1,2,3,4,…,n}$ ，你每次操作可以交换其中任意两个数字的位置，但是要确保除了第一次交换是有两个数字不在原来的位置上外，后续每次操作之后只能增加一个不在原来位置上的数字（其实对应的就是题目中的 longest permutation chain ） 当所有数字都不在原来的位置时，操作结束 解题过程首先根据题意，显然本题除了每组询问的 $chai">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-18T00:50:52.019Z">
+<meta property="og:updated_time" content="2022-08-06T02:54:09.425Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="洛谷题解 AT244 【ハンバーガー(Hamburger)】">
-<meta name="twitter:description" content="很水，直接三目运算符判断，看不懂的自己了解一下三目运算符，附代码： 123456789101112131415#include&amp;lt;iostream&amp;gt;namespace UMR//本人专属命名空间&amp;#123;	int a,b,c,d,n;&amp;#125;using namespace std;using namespace UMR;int main()&amp;#123;	cin&amp;gt;&amp;gt;a&amp;g">
+<meta name="twitter:title" content="洛谷题解 CF1716B 【Permutation Chain】">
+<meta name="twitter:description" content="题意翻译现在有一个长度为 $n$ 的数组 ${1,2,3,4,…,n}$ ，你每次操作可以交换其中任意两个数字的位置，但是要确保除了第一次交换是有两个数字不在原来的位置上外，后续每次操作之后只能增加一个不在原来位置上的数字（其实对应的就是题目中的 longest permutation chain ） 当所有数字都不在原来的位置时，操作结束 解题过程首先根据题意，显然本题除了每组询问的 $chai">
 
 
 
 
 
 
-  <link rel="canonical" href="https://dgsyrc.github.io/2018/05/07/洛谷题解-AT244-【ハンバーガー-Hamburger-】/">
+  <link rel="canonical" href="https://dgsyrc.github.io/2022/08/06/洛谷题解-CF1716B-【Permutation Chain】/">
 
 
 
@@ -128,7 +128,7 @@
   };
 </script>
 
-  <title>洛谷题解 AT244 【ハンバーガー(Hamburger)】 | YRC的博客</title>
+  <title>洛谷题解 CF1716B 【Permutation Chain】 | YRC的博客</title>
   
 
 
@@ -445,7 +445,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dgsyrc.github.io/2018/05/07/洛谷题解-AT244-【ハンバーガー-Hamburger-】/">
+    <link itemprop="mainEntityOfPage" href="https://dgsyrc.github.io/2022/08/06/洛谷题解-CF1716B-【Permutation Chain】/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YRC">
@@ -462,7 +462,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">洛谷题解 AT244 【ハンバーガー(Hamburger)】
+          <h1 class="post-title" itemprop="name headline">洛谷题解 CF1716B 【Permutation Chain】
 
               
             
@@ -488,24 +488,12 @@
                 
               
 
-              <time title="创建时间：2018-05-07 12:46:18" itemprop="dateCreated datePublished" datetime="2018-05-07T12:46:18+08:00">2018-05-07</time>
+              <time title="创建时间：2022-08-06 11:00:00 / 修改时间：10:54:09" itemprop="dateCreated datePublished" datetime="2022-08-06T11:00:00+08:00">2022-08-06</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-18 08:50:52" itemprop="dateModified" datetime="2019-05-18T08:50:52+08:00">2019-05-18</time>
               
             
           </span>
@@ -539,7 +527,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">552</span>
+                <span title="本文字数">4.6k</span>
               
 
               
@@ -553,7 +541,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">4 分钟</span>
               
             </div>
           
@@ -573,10 +561,32 @@
       
 
       
-        <p>很水，直接三目运算符判断，看不懂的自己了解一下三目运算符，附代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">namespace UMR//本人专属命名空间</span><br><span class="line">&#123;</span><br><span class="line">	int a,b,c,d,n;</span><br><span class="line">&#125;</span><br><span class="line">using namespace std;</span><br><span class="line">using namespace UMR;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	cin&gt;&gt;a&gt;&gt;b&gt;&gt;c&gt;&gt;n;//输入</span><br><span class="line">	(n*1-a&gt;=0)?cout&lt;&lt;n*1-a&lt;&lt;&quot; &quot;:cout&lt;&lt;0&lt;&lt;&quot; &quot;;//三目运算符</span><br><span class="line">	(n*2-b&gt;=0)?cout&lt;&lt;n*2-b&lt;&lt;&quot; &quot;:cout&lt;&lt;0&lt;&lt;&quot; &quot;;//三目运算符</span><br><span class="line">	(n*3-c&gt;=0)?cout&lt;&lt;n*3-c:cout&lt;&lt;0;//三目运算符</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="题意翻译"><a href="#题意翻译" class="headerlink" title="题意翻译"></a>题意翻译</h3><p>现在有一个长度为 $n$ 的数组 ${1,2,3,4,…,n}$ ，你每次操作可以交换其中任意两个数字的位置，但是要确保除了第一次交换是有两个数字不在原来的位置上外，后续每次操作之后只能增加一个不在原来位置上的数字（其实对应的就是题目中的 <code>longest permutation chain</code> ）</p>
+<p>当所有数字都不在原来的位置时，操作结束</p>
+<h3 id="解题过程"><a href="#解题过程" class="headerlink" title="解题过程"></a>解题过程</h3><p>首先根据题意，显然本题除了每组询问的 $chain$ 长度唯一外，操作过程并不唯一</p>
+<p>题目其实就是要求我们构造一种操作使得符合上述题意</p>
+<p>我这里采用的是先交换首位两个数字，再按照右左右左的顺序依次交换相邻两个数（因为第三组样例是）</p>
+<p><del>貌似语言不好说明，那就举个例</del></p>
+<p>$n$ 为奇数的例子</p>
+<p>当 $n=5$ 时：</p>
+<p>原始数组： $[1,2,3,4,5] \ \operatorname{fixedness}=5$</p>
+<p>操作1： $[5,2,3,4,1] \ \operatorname{fixedness}=3$</p>
+<p>操作2： $[5,2,3,1,4] \ \operatorname{fixedness}=2$</p>
+<p>操作3： $[2,5,3,1,4] \ \operatorname{fixedness}=1$</p>
+<p>操作4： $[2,5,1,3,4] \ \operatorname{fixedness}=0$</p>
+<p>因此链长为 $5$</p>
+<p>$n$ 为偶数的例子</p>
+<p>$n=4$ 时：</p>
+<p>原始数组： $[1,2,3,4] \ \operatorname{fixedness}=4$</p>
+<p>操作1： $[4,2,3,1] \ \operatorname{fixedness}=2$</p>
+<p>操作2： $[4,2,1,3] \ \operatorname{fixedness}=1$</p>
+<p>操作3： $[2,4,1,3] \ \operatorname{fixedness}=0$</p>
+<p>因此链长为 $4$</p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>不要漏了输出原始数组！</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><hr>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,m,t,num[<span class="number">110</span>],l,r; <span class="comment">//l,r分别是目前左右操作的位置</span></span><br><span class="line"><span class="keyword">bool</span> pd=<span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</span><br><span class="line">    <span class="keyword">while</span>(t--)</span><br><span class="line">    &#123;</span><br><span class="line">        l=<span class="number">1</span>;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">        r=n;</span><br><span class="line">        pd=<span class="literal">false</span>;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,n);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> a=<span class="number">1</span>;a&lt;=n;++a)</span><br><span class="line">        &#123;</span><br><span class="line">            num[a]=a;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d "</span>,num[a]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">        <span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">0</span>) <span class="comment">//n为偶数时</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">while</span>(l!=n/<span class="number">2</span>+<span class="number">1</span>||r!=n/<span class="number">2</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(l==<span class="number">1</span>&amp;&amp;r==n) <span class="comment">//第一步</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">int</span> tmp=num[l];</span><br><span class="line">                    num[l]=num[r];</span><br><span class="line">                    num[r]=tmp;</span><br><span class="line">                    <span class="keyword">for</span>(<span class="keyword">int</span> a=<span class="number">1</span>;a&lt;=n;++a)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">"%d "</span>,num[a]);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">                    l++;</span><br><span class="line">                    r--;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span>(pd) <span class="comment">//左边交换</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        pd=<span class="literal">false</span>;</span><br><span class="line">                        <span class="keyword">int</span> tmp=num[l];</span><br><span class="line">                        num[l]=num[l<span class="number">-1</span>];</span><br><span class="line">                        num[l<span class="number">-1</span>]=tmp;</span><br><span class="line">                        <span class="keyword">for</span>(<span class="keyword">int</span> a=<span class="number">1</span>;a&lt;=n;++a)</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="built_in">printf</span>(<span class="string">"%d "</span>,num[a]);</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">                        l++;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span> <span class="comment">//右边交换</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        pd=<span class="literal">true</span>;</span><br><span class="line">                        <span class="keyword">int</span> tmp=num[r];</span><br><span class="line">                        num[r]=num[r+<span class="number">1</span>];</span><br><span class="line">                        num[r+<span class="number">1</span>]=tmp;</span><br><span class="line">                        <span class="keyword">for</span>(<span class="keyword">int</span> a=<span class="number">1</span>;a&lt;=n;++a)</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="built_in">printf</span>(<span class="string">"%d "</span>,num[a]);</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">                        r--;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="comment">//n为奇数时</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">while</span>(r!=(n+<span class="number">1</span>)/<span class="number">2</span><span class="number">-1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(l==<span class="number">1</span>&amp;&amp;r==n) <span class="comment">//第一步</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">int</span> tmp=num[l];</span><br><span class="line">                    num[l]=num[r];</span><br><span class="line">                    num[r]=tmp;</span><br><span class="line">                    <span class="keyword">for</span>(<span class="keyword">int</span> a=<span class="number">1</span>;a&lt;=n;++a)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">"%d "</span>,num[a]);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">                    l++;</span><br><span class="line">                    r--;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span>(pd) <span class="comment">//左边交换</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        pd=<span class="literal">false</span>;</span><br><span class="line">                        <span class="keyword">int</span> tmp=num[l];</span><br><span class="line">                        num[l]=num[l<span class="number">-1</span>];</span><br><span class="line">                        num[l<span class="number">-1</span>]=tmp;</span><br><span class="line">                        <span class="keyword">for</span>(<span class="keyword">int</span> a=<span class="number">1</span>;a&lt;=n;++a)</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="built_in">printf</span>(<span class="string">"%d "</span>,num[a]);</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">                        l++;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span> <span class="comment">//右边交换</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        pd=<span class="literal">true</span>;</span><br><span class="line">                        <span class="keyword">int</span> tmp=num[r];</span><br><span class="line">                        num[r]=num[r+<span class="number">1</span>];</span><br><span class="line">                        num[r+<span class="number">1</span>]=tmp;</span><br><span class="line">                        <span class="keyword">for</span>(<span class="keyword">int</span> a=<span class="number">1</span>;a&lt;=n;++a)</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="built_in">printf</span>(<span class="string">"%d "</span>,num[a]);</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">                        r--;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>题目详见:<a href="https://www.luogu.org/problem/show?pid=AT244" target="_blank" rel="noopener">https://www.luogu.org/problem/show?pid=AT244</a></p>
+<p>题目详见:<a href="https://www.luogu.com.cn/problem/show?pid=CF1716B" target="_blank" rel="noopener">https://www.luogu.com.cn/problem/show?pid=CF1716B</a></p>
 
       
     </div>
@@ -603,6 +613,8 @@
             <a href="/tags/题解/" rel="tag"># 题解</a>
           
             <a href="/tags/洛谷/" rel="tag"># 洛谷</a>
+          
+            <a href="/tags/Codeforces/" rel="tag"># Codeforces</a>
           
         </div>
       
@@ -635,8 +647,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/26/洛谷题解-P3152-【正整数序列】/" rel="next" title="洛谷题解 P3152 【正整数序列】">
-                <i class="fa fa-chevron-left"></i> 洛谷题解 P3152 【正整数序列】
+              <a href="/2022/08/06/洛谷题解-CF1716A-【2-3 Moves】/" rel="next" title="洛谷题解 CF1716A 【2-3 Moves】">
+                <i class="fa fa-chevron-left"></i> 洛谷题解 CF1716A 【2-3 Moves】
               </a>
             
           </div>
@@ -644,10 +656,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/10/干物妹！小埋！第二弹 比赛题解/" rel="prev" title="干物妹！小埋！第二弹 比赛题解">
-                干物妹！小埋！第二弹 比赛题解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -692,8 +700,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -916,6 +933,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题意翻译"><span class="nav-number">1.</span> <span class="nav-text">题意翻译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题过程"><span class="nav-number">2.</span> <span class="nav-text">解题过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">3.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现"><span class="nav-number">4.</span> <span class="nav-text">代码实现</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1468,6 +1502,43 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
   
 
 
