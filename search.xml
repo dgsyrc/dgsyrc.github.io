@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[洛谷题解 CF1713A 【Traveling Salesman Problem】]]></title>
-    <url>%2F2022%2F08%2F07%2F%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3%20CF1713A%20%E3%80%90Traveling%20Salesman%20Problem%E3%80%91%20%2F</url>
+    <url>%2F2022%2F08%2F07%2F%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3-CF1713A-%E3%80%90Traveling%20Salesman%20Problem%E3%80%91%2F</url>
     <content type="text"><![CDATA[题目大意一个人站在原点，x轴与y轴上分布有几个箱子，人每次只能走一个单位（上/下/左/右），求经过所有箱子并回到原点的最少步数 思路箱子都在坐标轴上，而我们又知道两点之间线段最短 所以显然最短路就是到达各个轴上离原点最远的箱子后再折返 刚好在轴上来回走两次 至于题目给的样例图片走法 只要将路径平移至坐标轴就是我上面说的，总步数是一样的 因此只需要找出两条坐标轴正负半轴上离原点最远的箱子坐标就好了 答案就是找出来的四个点离原点的距离总和*2 代码实现12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152#include&lt;iostream&gt;#include&lt;cstdio&gt;#include&lt;cmath&gt;using namespace std;int t,n,mp[110][2],maxw[2],maxh[2];int main()&#123; scanf("%d",&amp;t); while(t--) &#123; scanf("%d",&amp;n); maxw[0]=0; maxw[1]=0; maxh[0]=0; maxh[1]=0; for(int a=1;a&lt;=n;++a) &#123; scanf("%d%d",&amp;mp[a][0],&amp;mp[a][1]); if(mp[a][0]==0) &#123; if(mp[a][1]&gt;=0) &#123; maxh[1]=max(maxh[1],mp[a][1]);//y轴正方向 &#125; else &#123; maxh[0]=max(abs(mp[a][1]),maxh[0]);//y轴负方向 &#125; &#125; else &#123; if(mp[a][1]==0) &#123; if(mp[a][0]&gt;=0) &#123; maxw[1]=max(maxw[1],mp[a][0]);//x轴正方向 &#125; else &#123; maxw[0]=max(abs(mp[a][0]),maxw[0]);//x轴负方向 &#125; &#125; &#125; &#125; printf("%d\n",(maxw[0]+maxw[1]+maxh[0]+maxh[1])*2); &#125; return 0;&#125; 题目详见:https://www.luogu.com.cn/problem/CF1713A]]></content>
       <tags>
         <tag>题解</tag>
