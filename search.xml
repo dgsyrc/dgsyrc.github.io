@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[洛谷题解 CF1713A 【Traveling Salesman Problem】]]></title>
+    <url>%2F2022%2F08%2F07%2F%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3%20CF1713A%20%E3%80%90Traveling%20Salesman%20Problem%E3%80%91%20%2F</url>
+    <content type="text"><![CDATA[题目大意一个人站在原点，x轴与y轴上分布有几个箱子，人每次只能走一个单位（上/下/左/右），求经过所有箱子并回到原点的最少步数 思路箱子都在坐标轴上，而我们又知道两点之间线段最短 所以显然最短路就是到达各个轴上离原点最远的箱子后再折返 刚好在轴上来回走两次 至于题目给的样例图片走法 只要将路径平移至坐标轴就是我上面说的，总步数是一样的 因此只需要找出两条坐标轴正负半轴上离原点最远的箱子坐标就好了 答案就是找出来的四个点离原点的距离总和*2 代码实现12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152#include&lt;iostream&gt;#include&lt;cstdio&gt;#include&lt;cmath&gt;using namespace std;int t,n,mp[110][2],maxw[2],maxh[2];int main()&#123; scanf("%d",&amp;t); while(t--) &#123; scanf("%d",&amp;n); maxw[0]=0; maxw[1]=0; maxh[0]=0; maxh[1]=0; for(int a=1;a&lt;=n;++a) &#123; scanf("%d%d",&amp;mp[a][0],&amp;mp[a][1]); if(mp[a][0]==0) &#123; if(mp[a][1]&gt;=0) &#123; maxh[1]=max(maxh[1],mp[a][1]);//y轴正方向 &#125; else &#123; maxh[0]=max(abs(mp[a][1]),maxh[0]);//y轴负方向 &#125; &#125; else &#123; if(mp[a][1]==0) &#123; if(mp[a][0]&gt;=0) &#123; maxw[1]=max(maxw[1],mp[a][0]);//x轴正方向 &#125; else &#123; maxw[0]=max(abs(mp[a][0]),maxw[0]);//x轴负方向 &#125; &#125; &#125; &#125; printf("%d\n",(maxw[0]+maxw[1]+maxh[0]+maxh[1])*2); &#125; return 0;&#125; 题目详见:https://www.luogu.com.cn/problem/CF1713A]]></content>
+      <tags>
+        <tag>题解</tag>
+        <tag>洛谷</tag>
+        <tag>Codeforces</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[洛谷题解 CF1716B 【Permutation Chain】]]></title>
     <url>%2F2022%2F08%2F06%2F%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3-CF1716B-%E3%80%90Permutation%20Chain%E3%80%91%2F</url>
     <content type="text"><![CDATA[题意翻译现在有一个长度为 $n$ 的数组 ${1,2,3,4,…,n}$ ，你每次操作可以交换其中任意两个数字的位置，但是要确保除了第一次交换是有两个数字不在原来的位置上外，后续每次操作之后只能增加一个不在原来位置上的数字（其实对应的就是题目中的 longest permutation chain ） 当所有数字都不在原来的位置时，操作结束 解题过程首先根据题意，显然本题除了每组询问的 $chain$ 长度唯一外，操作过程并不唯一 题目其实就是要求我们构造一种操作使得符合上述题意 我这里采用的是先交换首位两个数字，再按照右左右左的顺序依次交换相邻两个数（因为第三组样例是） 貌似语言不好说明，那就举个例 $n$ 为奇数的例子 当 $n=5$ 时： 原始数组： $[1,2,3,4,5] \ \operatorname{fixedness}=5$ 操作1： $[5,2,3,4,1] \ \operatorname{fixedness}=3$ 操作2： $[5,2,3,1,4] \ \operatorname{fixedness}=2$ 操作3： $[2,5,3,1,4] \ \operatorname{fixedness}=1$ 操作4： $[2,5,1,3,4] \ \operatorname{fixedness}=0$ 因此链长为 $5$ $n$ 为偶数的例子 $n=4$ 时： 原始数组： $[1,2,3,4] \ \operatorname{fixedness}=4$ 操作1： $[4,2,3,1] \ \operatorname{fixedness}=2$ 操作2： $[4,2,1,3] \ \operatorname{fixedness}=1$ 操作3： $[2,4,1,3] \ \operatorname{fixedness}=0$ 因此链长为 $4$ 注意不要漏了输出原始数组！ 代码实现 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124#include&lt;iostream&gt;#include&lt;cstdio&gt;using namespace std;int n,m,t,num[110],l,r; //l,r分别是目前左右操作的位置bool pd=false;int main()&#123; scanf("%d",&amp;t); while(t--) &#123; l=1; scanf("%d",&amp;n); r=n; pd=false; printf("%d\n",n); for(int a=1;a&lt;=n;++a) &#123; num[a]=a; printf("%d ",num[a]); &#125; printf("\n"); if(n%2==0) //n为偶数时 &#123; while(l!=n/2+1||r!=n/2) &#123; if(l==1&amp;&amp;r==n) //第一步 &#123; int tmp=num[l]; num[l]=num[r]; num[r]=tmp; for(int a=1;a&lt;=n;++a) &#123; printf("%d ",num[a]); &#125; printf("\n"); l++; r--; continue; &#125; else &#123; if(pd) //左边交换 &#123; pd=false; int tmp=num[l]; num[l]=num[l-1]; num[l-1]=tmp; for(int a=1;a&lt;=n;++a) &#123; printf("%d ",num[a]); &#125; printf("\n"); l++; &#125; else //右边交换 &#123; pd=true; int tmp=num[r]; num[r]=num[r+1]; num[r+1]=tmp; for(int a=1;a&lt;=n;++a) &#123; printf("%d ",num[a]); &#125; printf("\n"); r--; &#125; &#125; &#125; &#125; else //n为奇数时 &#123; while(r!=(n+1)/2-1) &#123; if(l==1&amp;&amp;r==n) //第一步 &#123; int tmp=num[l]; num[l]=num[r]; num[r]=tmp; for(int a=1;a&lt;=n;++a) &#123; printf("%d ",num[a]); &#125; printf("\n"); l++; r--; continue; &#125; else &#123; if(pd) //左边交换 &#123; pd=false; int tmp=num[l]; num[l]=num[l-1]; num[l-1]=tmp; for(int a=1;a&lt;=n;++a) &#123; printf("%d ",num[a]); &#125; printf("\n"); l++; &#125; else //右边交换 &#123; pd=true; int tmp=num[r]; num[r]=num[r+1]; num[r+1]=tmp; for(int a=1;a&lt;=n;++a) &#123; printf("%d ",num[a]); &#125; printf("\n"); r--; &#125; &#125; &#125; &#125; &#125; return 0;&#125; 题目详见:https://www.luogu.com.cn/problem/show?pid=CF1716B]]></content>
@@ -373,8 +383,8 @@
     <url>%2F2019%2F01%2F17%2F%E6%B4%9B%E8%B0%B7%E7%AE%A1%E7%90%86%E8%AF%AD%E5%BD%95%EF%BC%881%EF%BC%89%2F</url>
     <content type="text"><![CDATA[]]></content>
       <tags>
-        <tag>洛谷</tag>
         <tag>图片</tag>
+        <tag>洛谷</tag>
       </tags>
   </entry>
   <entry>
