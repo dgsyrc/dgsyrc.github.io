@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[算法与数据结构清单]]></title>
     <url>%2F2022%2F08%2F08%2F%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%B8%85%E5%8D%95%2F</url>
-    <content type="text"><![CDATA[算法搜索DFS √ BFS √ A* IDA* 最短路Dijkstra（堆优化） √ Floyd √ SPFA（优化后的Bellman-Ford）√ 最小生成树(MST)Kruskal Prim √ 拓扑排序动态规划背包 状态压缩 区间DP 树形DP 并查集 √路径压缩 √ 二分图匹配网络流最大流 最小割 KMPRMQST表 LCATarjan 平衡树莫队凸包博弈论巴什博弈 威佐夫博奕 尼姆博奕 数论欧几里得算法 扩展欧几里得算法 中国剩余定理 尺取法 欧拉定理 乘法逆元 威尔逊定理 数据结构：树状数组 哈希表 线段树 分块 红黑树]]></content>
+    <content type="text"><![CDATA[算法搜索DFS √ BFS √ A* IDA* 最短路Dijkstra（堆优化） √ Floyd √ SPFA（优化后的Bellman-Ford）√ 最小生成树(MST)Kruskal Prim √ 拓扑排序动态规划背包 状态压缩 区间DP 树形DP 并查集 √路径压缩 √ 二分图匹配网络流最大流 最小割 KMPRMQST表 LCATarjan 平衡树莫队凸包博弈论巴什博弈 威佐夫博奕 尼姆博奕 数论欧几里得算法 扩展欧几里得算法 中国剩余定理 尺取法 欧拉定理 乘法逆元 威尔逊定理 数据结构：树状数组 √ 哈希表 线段树 分块 红黑树]]></content>
       <tags>
         <tag>算法</tag>
         <tag>数据结构</tag>
