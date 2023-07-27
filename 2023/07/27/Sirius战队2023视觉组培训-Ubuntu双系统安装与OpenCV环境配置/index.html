@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<meta name="google-site-verification" content="uCVu9zKr3NZgtY3naIlxklayHbfQKMEpOXvyfgsfILw">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.7.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="前期准备至少200G的电脑硬盘空间（注意，不是某个盘符下有200G以上的空间，后面会细说） 一个8G以上的协议至少为USB3.0的U盘（不能用SD卡，后面安装大概率装不上），且U盘为空（后面需要格式化），如果没有U盘可以用移动硬盘（doge Ventoy（用于制作安装系统的启动盘） Ubuntu 22.04 的安装镜像文件（清华开源镜像站） 下面三个需要在制作好U盘启动盘后拷到U盘里 VScode">
+<meta name="keywords" content="教程,OpenCV,计算机视觉,Robomaster,Ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置">
+<meta property="og:url" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/index.html">
+<meta property="og:site_name" content="YRC的博客">
+<meta property="og:description" content="前期准备至少200G的电脑硬盘空间（注意，不是某个盘符下有200G以上的空间，后面会细说） 一个8G以上的协议至少为USB3.0的U盘（不能用SD卡，后面安装大概率装不上），且U盘为空（后面需要格式化），如果没有U盘可以用移动硬盘（doge Ventoy（用于制作安装系统的启动盘） Ubuntu 22.04 的安装镜像文件（清华开源镜像站） 下面三个需要在制作好U盘启动盘后拷到U盘里 VScode">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713153049184.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713153304347.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713153531600.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713153609066.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713152631709.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713154300474.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713154523447.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/992d6035218781a390a1584b98bda98.jpg">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/1c6ef2bb427842de9e35b6955bd28bc.jpg">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/2d540ce7b97ed2c8fa821bc9d056c83.jpg">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/056956bafba0f412f4c2af4f56106ed.jpg">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/67a62d677cec452208b7273afc192df.jpg">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/50b36f817644504fed935c43d12a4dc.jpg">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713160924192.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713161200118.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713161326158.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713162017982.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713162823468.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713163328631.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713163419499.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713163617658.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713163727691.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713165504671.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713170625032.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713170734097.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713170802080.png">
+<meta property="og:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713170825135.png">
+<meta property="og:updated_time" content="2023-07-27T11:52:55.356Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置">
+<meta name="twitter:description" content="前期准备至少200G的电脑硬盘空间（注意，不是某个盘符下有200G以上的空间，后面会细说） 一个8G以上的协议至少为USB3.0的U盘（不能用SD卡，后面安装大概率装不上），且U盘为空（后面需要格式化），如果没有U盘可以用移动硬盘（doge Ventoy（用于制作安装系统的启动盘） Ubuntu 22.04 的安装镜像文件（清华开源镜像站） 下面三个需要在制作好U盘启动盘后拷到U盘里 VScode">
+<meta name="twitter:image" content="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/image-20230713153049184.png">
+
+
+
+
+
+
+  <link rel="canonical" href="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置 | YRC的博客</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">YRC的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Nothing is impossible！</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-other">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/other/" rel="section"><i class="menu-item-icon fa fa-fw fa-tv"></i> <br>其它</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>站点地图</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-game">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/game/" rel="section"><i class="menu-item-icon fa fa-fw fa-play"></i> <br>游戏</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-intangible">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/404.html" rel="section"><i class="menu-item-icon fa fa-fw fa-photo"></i> <br>404(随机图)</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-oj">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/OJ/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Online Judge</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dgsyrc.github.io/2023/07/27/Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YRC">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/main.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YRC的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Sirius战队2023视觉组培训-Ubuntu双系统安装与OpenCV环境配置
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2023-07-27 19:00:00 / 修改时间：19:52:55" itemprop="dateCreated datePublished" datetime="2023-07-27T19:00:00+08:00">2023-07-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.8k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">3 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p>至少200G的电脑硬盘空间（注意，不是某个盘符下有200G以上的空间，后面会细说）</p>
+<p>一个8G以上的协议至少为USB3.0的U盘（不能用SD卡，后面安装大概率装不上），且U盘为空（后面需要格式化），如果没有U盘可以用移动硬盘（doge</p>
+<p><a href="https://www.ventoy.net/cn/download.html" target="_blank" rel="noopener">Ventoy（用于制作安装系统的启动盘）</a></p>
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/jammy/ubuntu-22.04.2-desktop-amd64.iso" target="_blank" rel="noopener">Ubuntu 22.04 的安装镜像文件（清华开源镜像站）</a></p>
+<p>下面三个需要在制作好U盘启动盘后拷到U盘里</p>
+<p><a href="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" target="_blank" rel="noopener">VScode的Linux安装包</a></p>
+<p><a href="https://github.com/opencv/opencv/releases" target="_blank" rel="noopener">OpenCV 4.5.5 的源码（Source Code）</a></p>
+<p><a href="https://github.com/opencv/opencv_contrib/tags" target="_blank" rel="noopener">OpenCV_Contrib 4.5.5 的源码（Source Code）</a></p>
+<h2 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h2><h3 id="空间预留"><a href="#空间预留" class="headerlink" title="空间预留"></a>空间预留</h3><p>方法一：如果电脑有多的硬盘插槽，可以直接买新的固态硬盘装上电脑直接跳过本步骤，硬盘的安装可以自己搜（过程很简单），怕弄坏可以拿硬盘找官方保修点装</p>
+<p>方法二：直接将某个盘下的文件全部移动到另一个盘，如果该盘下装有软件，请先卸载再安装到另一个盘</p>
+<p>盘的容量不一定要200G左右，可以比这个大，后面多的空间可以单独再分出来存东西</p>
+<p><img src="image-20230713153049184.png" alt></p>
+<p>右键，此电脑-&gt;管理</p>
+<p><img src="image-20230713153304347.png" alt="image-20230713153304347"></p>
+<p>进入存储-&gt;磁盘管理，右键删除刚才清理出来的盘</p>
+<p><img src="image-20230713153531600.png" alt="image-20230713153531600"></p>
+<p>删完后会变成这样</p>
+<p><img src="image-20230713153609066.png" alt="image-20230713153609066"></p>
+<p>其它方法：例如用Diskgenius等工具的方法这里就不细讲，方法很多，只要能不丢失原有数据分出空闲分区即可</p>
+<h3 id="系统安装盘"><a href="#系统安装盘" class="headerlink" title="系统安装盘"></a>系统安装盘</h3><p>插U盘</p>
+<p>解压下好的Ventoy，打开</p>
+<p><img src="image-20230713152631709.png" alt="image-20230713152631709"></p>
+<p>选择你的U盘，点击安装</p>
+<p><img src="image-20230713154300474.png" alt="image-20230713154300474"></p>
+<p>安装好后会看到电脑里有个叫 Ventoy 的盘，把下好的 Ubuntu 22.04 镜像放进去</p>
+<p><img src="image-20230713154523447.png" alt="image-20230713154523447"></p>
+<p>如果不是这个文件，那大概率是下错了</p>
+<h3 id="Ubuntu安装"><a href="#Ubuntu安装" class="headerlink" title="Ubuntu安装"></a>Ubuntu安装</h3><p>重启电脑，但不要进windows</p>
+<p>这里需要自己查询自己的电脑开机时按哪个键更改启动盘，或者进BIOS更改启动顺序</p>
+<p>常见的有 <code>F2</code> <code>F9</code> <code>F12</code></p>
+<p>如果键盘上的这些键是小字，功能图标是大字，那在按的的时候要跟 <code>Fn</code> 一起按</p>
+<p>然后选择带USB的那个启动（假如提示无法通过该盘启动，可能是没关安全启动，需要到BIOS里面关掉）</p>
+<p>进入下图后回车即可</p>
+<p><img src="992d6035218781a390a1584b98bda98.jpg" alt="992d6035218781a390a1584b98bda98"></p>
+<p>选择第一个然后回车</p>
+<p><img src="1c6ef2bb427842de9e35b6955bd28bc.jpg" alt="1c6ef2bb427842de9e35b6955bd28bc"></p>
+<p>等待进入Ubuntu的安装界面</p>
+<p>如果在这一步出现白字刷屏报错，显示Live CD启动失败及无法打开某个block则需要换个U盘做启动盘</p>
+<p>别的错误baidu解决（</p>
+<p>进入Ubuntu安装界面，点击Install</p>
+<p><img src="2d540ce7b97ed2c8fa821bc9d056c83.jpg" alt="2d540ce7b97ed2c8fa821bc9d056c83"></p>
+<p>语言选English，因为中文下自动生成的中文路径在后面使用过程中容易出问题</p>
+<p><img src="056956bafba0f412f4c2af4f56106ed.jpg" alt="056956bafba0f412f4c2af4f56106ed"></p>
+<p>连接wifi，后面需要联网自动安装驱动（不要使用需要网页登录的wifi，如学校的，这里没法登录）</p>
+<p><img src="67a62d677cec452208b7273afc192df.jpg" alt="67a62d677cec452208b7273afc192df"></p>
+<p>把 <code>Install third-party</code> 勾上，这个是自动安装驱动</p>
+<p><img src="50b36f817644504fed935c43d12a4dc.jpg" alt="50b36f817644504fed935c43d12a4dc"></p>
+<p>这一步很重要，别选错了，选错你的电脑数据就没了</p>
+<p>选择 <code>Something else</code></p>
+<p><img src="image-20230713160924192.png" alt="image-20230713160924192"></p>
+<p>接着找到前面步骤中预留的空间（显示 <code>free space</code> 字样的）</p>
+<p><img src="image-20230713161200118.png" alt="image-20230713161200118"></p>
+<p>点击 <code>+</code> </p>
+<p>先新建 <code>swap</code> 分区</p>
+<p>空间按 16G = 16384MB 分</p>
+<p>选择逻辑分区</p>
+<p>下面 <code>Use as</code> 选择 <code>swap area</code></p>
+<p><img src="image-20230713161326158.png" alt="image-20230713161326158"></p>
+<p>确定后再新建 <code>boot</code> 分区</p>
+<p>空间分 4G=4096MB</p>
+<p>选择逻辑分区</p>
+<p>下面 <code>Use as</code> 选择 <code>Ext4 journaling file system</code></p>
+<p> <code>Mount Point</code> 选择 <code>/boot</code></p>
+<p><img src="image-20230713162017982.png" alt="image-20230713162017982"></p>
+<p>确定后再新建 <code>/</code> 分区</p>
+<p>空间分 100G = 102400MB</p>
+<p>选择逻辑分区</p>
+<p>下面 <code>Use as</code> 选择 <code>Ext4 journaling file system</code></p>
+<p> <code>Mount Point</code> 选择 <code>/</code></p>
+<p><img src="image-20230713162823468.png" alt="image-20230713162823468"></p>
+<p>确定后再新建 <code>/home</code> 分区</p>
+<p>空间按需即可，如果是前面单独分出来的空间，直接把剩下的部分都分到这个分区</p>
+<p>如果是新盘，这个分区分100G够用了</p>
+<p>选择主分区</p>
+<p>下面 <code>Use as</code> 选择 <code>Ext4 journaling file system</code></p>
+<p> <code>Mount Point</code> 选择 <code>/home</code></p>
+<p><img src="image-20230713163328631.png" alt="image-20230713163328631"></p>
+<p>下面的 <code>Device for boot loaderinstallation</code> 选择 <code>/boot</code> 所在的 <code>Device</code></p>
+<p><img src="image-20230713163419499.png" alt="image-20230713163419499"></p>
+<p>接着点 <code>Install Now</code></p>
+<p>位置选 <code>Shang Hai</code>，这个是用来确定时区的</p>
+<p><img src="image-20230713163617658.png" alt="image-20230713163617658"></p>
+<p>下一步要填写用户名与密码，如果不想每次登录输密码把 <code>Log in automatically</code> 选上</p>
+<p>等待安装完成即可，可能比较慢，取决于网络环境</p>
+<p><img src="image-20230713163727691.png" alt="image-20230713163727691"></p>
+<p>安装完成后会提示重启，后面还会提示拔U盘，拔掉U盘回车即可</p>
+<p>如果没重启，手动开机就行</p>
+<p>开机的时候会进去Grub界面，可以通过键盘上下键更改选择</p>
+<p>在 <code>Ubuntu</code> 那一行回车进入 <code>Ubuntu</code></p>
+<p>在 <code>Windows Boot Manager</code> 那一行回车进入 <code>Windows</code></p>
+<h2 id="OpenCV环境配置"><a href="#OpenCV环境配置" class="headerlink" title="OpenCV环境配置"></a>OpenCV环境配置</h2><p>进入Ubuntu，把U盘里面当时拷进去的三个包复制到桌面</p>
+<p>先安装一些环境依赖</p>
+<p>在桌面右键打开终端 <code>Terminal</code></p>
+<p>依次执行以下指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br><span class="line">sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev</span><br><span class="line">sudo apt install libjasper1 libjasper-dev</span><br><span class="line">sudo apt install -y wget unzip</span><br><span class="line">sudo apt install -y make</span><br><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
+
+<p><code>sudo</code> 指令需要输入前面设置的密码</p>
+<p>如果提示[Y/n]，输入 Y 回车即可</p>
+<p>将OpenCV 4.5.5源码包解压到桌面，并把OpenCV_Contrib解压到OpenCV 4.5.5所在的文件夹内</p>
+<p>即下图：</p>
+<p><img src="image-20230713165504671.png" alt="image-20230713165504671"></p>
+<p>在上面这个文件夹内右键打开终端 <code>Terminal</code></p>
+<p>输入 <code>mkdir build</code> 新建 <code>build</code> 文件夹</p>
+<p>输入 <code>cd build</code> 打开 <code>build</code> 文件夹</p>
+<p>然后依次输入以下指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cmake ..</span><br><span class="line">sudo make -j2</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+
+<p>其中第二个指令的执行时间较长，这是由于在编译OpenCV库</p>
+<p>安装完成后，在终端中打开<code>opencv-4.5.5/sample/cpp/example_cmake</code></p>
+<p>新建文件夹 <code>build</code>，在终端打开后执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">make -j8</span><br><span class="line">./opencv_example</span><br></pre></td></tr></table></figure>
+
+<p>若出现 <code>Hello OpenCV</code> 则说明配置成功</p>
+<h2 id="代码编辑环境配置"><a href="#代码编辑环境配置" class="headerlink" title="代码编辑环境配置"></a>代码编辑环境配置</h2><p>把U盘里下载的 VScode 的.deb安装包放到桌面</p>
+<p>在桌面打开终端，输入以下指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i 你的安装包名字.deb</span><br></pre></td></tr></table></figure>
+
+<p>安装包名字可以右键安装包重命名 <code>Rename</code>  , <code>Ctrl + C</code> 复制，在终端中 <code>Ctrl + Shift + V</code> 粘贴</p>
+<p>安装完成后在终端输入以下指令回车执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code</span><br></pre></td></tr></table></figure>
+
+<p>打开VScode</p>
+<p>点击</p>
+<p><img src="image-20230713170625032.png" alt="image-20230713170625032"></p>
+<p>进入插件安装页面</p>
+<p>在搜索栏上输入 <code>Chinese</code> 安装这个语言包</p>
+<p><img src="image-20230713170734097.png" alt="image-20230713170734097"></p>
+<p>然后还要安装这四个包</p>
+<p><img src="image-20230713170802080.png" alt="image-20230713170802080"></p>
+<p><img src="image-20230713170825135.png" alt="image-20230713170825135"></p>
+<p>安装完即可</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/教程/" rel="tag"># 教程</a>
+          
+            <a href="/tags/OpenCV/" rel="tag"># OpenCV</a>
+          
+            <a href="/tags/计算机视觉/" rel="tag"># 计算机视觉</a>
+          
+            <a href="/tags/Robomaster/" rel="tag"># Robomaster</a>
+          
+            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+               <div id="needsharebutton-postbottom">
+                 <span class="btn">
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                 </span>
+               </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2023/02/15/Robomaster北京林业&北信科联队视觉开发文档/" rel="next" title="Robomaster北京林业&北信科联队视觉开发文档">
+                <i class="fa fa-chevron-left"></i> Robomaster北京林业&北信科联队视觉开发文档
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/main.png" alt="YRC">
+            
+              <p class="site-author-name" itemprop="name">YRC</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">61</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">48</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/dgsyrc" title="GitHub &rarr; https://github.com/dgsyrc" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:yrcminecraft@qq.com" title="E-Mail &rarr; mailto:yrcminecraft@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.luogu.org/space/show?uid=89910" title="luogu &rarr; https://www.luogu.org/space/show?uid=89910" rel="noopener" target="_blank"><i class="fa fa-fw fa-code"></i>luogu</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://space.bilibili.com/179225431?" title="bilibili &rarr; http://space.bilibili.com/179225431?" rel="noopener" target="_blank"><i class="fa fa-fw fa-tv"></i>bilibili</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://i.youku.com/yrcminecraft" title="youku &rarr; http://i.youku.com/yrcminecraft" rel="noopener" target="_blank"><i class="fa fa-fw fa-tv"></i>youku</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.luogu.org/team/show?teamid=6964" title="Group &rarr; https://www.luogu.org/team/show?teamid=6964" rel="noopener" target="_blank"><i class="fa fa-fw fa-book"></i>Group</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接(部分需翻墙)
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://dash.cloudflare.com" title="https://dash.cloudflare.com" rel="noopener" target="_blank">cloudflare</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://my.freenom.com/clientarea.php" title="https://my.freenom.com/clientarea.php" rel="noopener" target="_blank">freenom</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://minecraft-zh.gamepedia.com/Minecraft_Wiki" title="https://minecraft-zh.gamepedia.com/Minecraft_Wiki" rel="noopener" target="_blank">Minecraft Wiki</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.pixiv.net" title="https://www.pixiv.net" rel="noopener" target="_blank">Pixiv</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前期准备"><span class="nav-number">1.</span> <span class="nav-text">前期准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统安装"><span class="nav-number">2.</span> <span class="nav-text">系统安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#空间预留"><span class="nav-number">2.1.</span> <span class="nav-text">空间预留</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统安装盘"><span class="nav-number">2.2.</span> <span class="nav-text">系统安装盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ubuntu安装"><span class="nav-number">2.3.</span> <span class="nav-text">Ubuntu安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenCV环境配置"><span class="nav-number">3.</span> <span class="nav-text">OpenCV环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码编辑环境配置"><span class="nav-number">4.</span> <span class="nav-text">代码编辑环境配置</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YRC</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">104k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">1:35</span>
+  
+</div>
+
+
+  <div class="powered-by">YRC个人专属 V3.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – YRC Max 2.0</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+      }
+      else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
+  
+
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "box";
+      
+        pbOptions.boxForm = "horizontal";
+      
+        pbOptions.position = "bottomCenter";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+        flOptions.iconStyle = "box";
+      
+        flOptions.boxForm = "horizontal";
+      
+        flOptions.position = "middleRight";
+      
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script>
+  
+    bookmark.scrollToMark('auto', "#更多");
+  
+  </script>
+
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function () {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+  
+
+</body>
+</html>
+<script type="text/javascript" src="/js/src/love.js"></script>
+<script type="text/javascript" src="/live/autoload.js"></script>
